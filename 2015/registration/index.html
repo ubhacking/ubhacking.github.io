@@ -23,93 +23,96 @@
 	<body>
 		<div class="navbar navbar-inverse" role="navigation">
 		</div>
-		<div class="container text-center">
+		<div class="container">
 			<h1>UB Hacking Registration</h1>
 			<form>
 			<div class="panel panel-default">
-				<div class="panel-body text-center">
-					<ul>
-						<li>First name:
-						<input type="text" name="firstname" required></li>	
-						<li>Last name:
-						<input type="text" name="lastname" required></li>
-						<li>Phone number:
-						<input type="text" name="phone-number" hint="XXX-XXX-XXXX"></li>
+				<div class="panel-body">
+					<ul>Full name<span class="required"> *</span>
+						<li>
+						<input type="text" name="firstname" class="form-reg" placeholder="First" required></li>	
+						<li>
+						<input type="text" name="lastname" class="form-reg" placeholder="Last" required></li>
+						<li>Phone number
+						<input type="text" name="phone-number" class="form-reg" placeholder="123-456-7890"></li>
 					</ul>
 				</div>
 			</div>
 			<div class="panel panel-default">
-				<div class="panel-body text-center">
+				<div class="panel-body">
 					<ul>
-						<li>Sex:
-						<select name="sex">
-						<option value="null"></option>
+						<li>Sex<span class="required"> *</span>
+						<select name="sex" class="form-reg" required>
+						<option value="">Please select one.</option>
 						<option value="male">Male</option>
 						<option value="female">Female</option>
+						<option value="other">Other</option>
 						<option value="no">Prefer not to answer</option>
 						</select>
-						<li>School:
-						<input type="text" name="school"></li>
-						<li>Major:
-						<input type="text" name="major"></li>
-						<li>Year:
-						<select name="year">
-						<option value="null"></option>
-						<option value="freshman">Freshman</option>
-						<option value="sophomore">Sophomore</option>
-						<option value="junior">Junior</option>
-						<option value="senior">Senior</option>
-						<option value="other">Other</option>
+						<li>School<span class="required"> *</span>
+						<input type="text" name="school" class="form-reg" required></li>
+						<li>Major<span class="required"> *</span>
+						<input type="text" name="major" class="form-reg" required></li>
+						<li>Year<span class="required"> *</span>
+						<select name="year" class="form-reg" required>
+							<option value="">Please select one.</option>
+							<option value="freshman">Freshman</option>
+							<option value="sophomore">Sophomore</option>
+							<option value="junior">Junior</option>
+							<option value="senior">Senior</option>
+							<option value="other">Other</option>
 						</select></li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="panel panel-default">
-				<div class="panel-body text-center">
+				<div class="panel-body">
 					<ul>
-						<li>Is this your first Hackathon?
-					<select name="first-hackathon">
-					<option value="null"></option>
-					<option value="yes">Yes</option>
-					<option value="no">No</option>
-					</select>
-						</li>
-						<li>Are you thinking about working with hardware or software?
-						<select name="ware">
-						<option value="null"></option>
-						<option value="undecided">undecided</option>
-						<option value="hardware">Hardware</option>
-						<option value="software">Software</option>
-						</select></li>
-						<li>What are you building?
-						<textarea name="project" rows="7" col="50"></textarea>
-						</li>
-						<li>Tell us about something you have built in the past.
-						<textarea name="past-project" rows="7" col="50"></textarea>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-body text-center">
-				Resume:
-				<input type="file" name="resume" accept="pdf">
-				</div>
-			</div>
-
-			<div class="panel panel-default">
-				<div class="panel-body text-center">
-					<ul>
-						<li>Are you a vegetarian?
-						<select name="vegetarian">
-						<option value="null"></option>
+						<li>Is this your first Hackathon?<span class="required"> *</span>
+					<select name="first-hackathon" class="form-reg" required>
+						<option value="">Please select one.</option>
 						<option value="yes">Yes</option>
 						<option value="no">No</option>
+					</select>
+						</li>
+						<li>Are you thinking about working with hardware or software?<span class="required"> *</span>
+						<select name="ware" class="form-reg" required>
+							<option value="">Please select one.</option>
+							<option value="undecided">Undecided</option>
+							<option value="hardware">Hardware</option>
+							<option value="software">Software</option>
+						</select></li>
+						<li>What are you building?
+						<textarea name="project" rows="4" class="form-reg"></textarea>
+						</li>
+						<li>Tell us about something you have built in the past.
+						<textarea name="past-project" rows="4" class="form-reg"></textarea>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+				Resume:
+				<input type="file" name="resume" accept="pdf" class="form-reg" required>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul>
+						<li>Do you have any dietary restrictions?<span class="required"> *</span>
+						<select name="diet" class="form-reg" required>
+						<option value="">Please select one.</option>
+						<option value="none">None</option>
+						<option value="vegetarian">Vegetarian</option>
+						<option value="gluten">Gluten-free</option>
 						</select>
 						</li>
-						<li>Are there any dietary needs you need satisfied? Allergies, etc?
-						<textarea name="diet" rows="7" col="50"></textarea>
+						<li>Is there anything else we should know about? (Allergies, disabilties, etc.)
+						<textarea name="diet" rows="4" class="form-reg"></textarea>
 						</li>
 					</ul>
 				</div>
@@ -120,5 +123,10 @@
 
 			</form>
 		</div>
+
+		<!--[if lt IE 9]>
+		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->	
 	</body>
 <html>

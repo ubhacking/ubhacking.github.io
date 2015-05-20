@@ -5,6 +5,20 @@
  */
 
 /* Global Styles */
+.required {
+    color: red;
+}
+
+.form-reg {
+    border-color: #041A9B;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.curve {
+    border-radius: 8px;
+}
+
 ul {
     list-style-type: none;
 }
