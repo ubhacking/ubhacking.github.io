@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+	    <title>UB Hacking Registration</title>
+
+	    <!-- Bootstrap Core CSS -->
+	    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="../css/stylish-portfolio.css" rel="stylesheet">
+
+	    <!-- Custom Fonts -->
+	    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<div class="navbar navbar-inverse" role="navigation">
+		</div>
+		<div class="container text-center">
+			<h1>UB Hacking Registration</h1>
+			<form>
+			<div class="panel panel-default">
+				<div class="panel-body text-center">
+					<ul>
+						<li>First name:
+						<input type="text" name="firstname" required></li>	
+						<li>Last name:
+						<input type="text" name="lastname" required></li>
+						<li>Phone number:
+						<input type="text" name="phone-number" hint="XXX-XXX-XXXX"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body text-center">
+					<ul>
+						<li>Sex:
+						<select name="sex">
+						<option value="null"></option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="no">Prefer not to answer</option>
+						</select>
+						<li>School:
+						<input type="text" name="school"></li>
+						<li>Major:
+						<input type="text" name="major"></li>
+						<li>Year:
+						<select name="year">
+						<option value="null"></option>
+						<option value="freshman">Freshman</option>
+						<option value="sophomore">Sophomore</option>
+						<option value="junior">Junior</option>
+						<option value="senior">Senior</option>
+						<option value="other">Other</option>
+						</select></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-body text-center">
+					<ul>
+						<li>Is this your first Hackathon?
+					<select name="first-hackathon">
+					<option value="null"></option>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+					</select>
+						</li>
+						<li>Are you thinking about working with hardware or software?
+						<select name="ware">
+						<option value="null"></option>
+						<option value="undecided">undecided</option>
+						<option value="hardware">Hardware</option>
+						<option value="software">Software</option>
+						</select></li>
+						<li>What are you building?
+						<textarea name="project" rows="7" col="50"></textarea>
+						</li>
+						<li>Tell us about something you have built in the past.
+						<textarea name="past-project" rows="7" col="50"></textarea>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body text-center">
+				Resume:
+				<input type="file" name="resume" accept="pdf">
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-body text-center">
+					<ul>
+						<li>Are you a vegetarian?
+						<select name="vegetarian">
+						<option value="null"></option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+						</select>
+						</li>
+						<li>Are there any dietary needs you need satisfied? Allergies, etc?
+						<textarea name="diet" rows="7" col="50"></textarea>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-12 text-center">
+				<input type="submit" value="Submit">
+			</div>
+
+			</form>
+		</div>
+	</body>
+<html>
