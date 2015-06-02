@@ -5,13 +5,31 @@
  */
 
 /* Global Styles */
+
+
+.reg-title {
+    margin-top: 100px;
+}
+
+.field-title {
+    margin-top: 15px;
+}
+
+.group-title {
+    font-size: 18px;
+}
+
+.button {
+    background-color: #FFFFFF;
+}
+
 .required {
     color: red;
 }
 
 .form-reg {
-    border-color: #041A9B;
-    border-radius: 5px;
+    border: 1px solid #000000;
+    border-radius: 3px;
     width: 100%;
 }
 
