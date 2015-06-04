@@ -13,7 +13,14 @@
 }
 
 .button {
-    background-color: #FFFFFF;
+	color: #FFFFFF;
+    background-color: #000000;
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+}
+
+.button:hover {
+	background-color: #b54d4d;
 }
 
 .required {

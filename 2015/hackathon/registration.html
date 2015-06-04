@@ -20,19 +20,19 @@ make the page look nice with CSS.
 	    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
-	    <link href="../hackathon/style.css" rel="stylesheet">
+	    <link href="style.css" rel="stylesheet">
 
 	    <!-- Custom Fonts -->
 	    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	</head>
 	
-	<body>
-		<div class="body-layout">
+	<body class="full-layout">
+		<div class="body-wrapper">
 			<div class="yamm navbar basic default black">
     			<div class="navbar-header">
       				<div class="container">
-        				<div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand" href="index.html"><img src="../hackathon/style/images/logo.png" data-at2x="style/images/logo@2x.png" alt="" /></a></div>
+        				<div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand" href="index.html"><img src="style/images/logo.png" data-at2x="style/images/logo@2x.png" alt="" /></a></div>
         				<div class="collapse navbar-collapse pull-right">
           					<ul class="nav navbar-nav">
 					            <li class="dropdown"><a href="index.html">Home</a>
@@ -56,7 +56,8 @@ make the page look nice with CSS.
   		</div>
   		<div class="container">
 			<h1 class="reg-title">UB Hacking Registration</h1>
-			<p>Thanks for your interest in UBHacking. Please fill in all fields that you are able to, as it helps us keep track of data. You will only be able to update your resume once your account is created.
+			<p>Thanks for your interest in UBHacking. You will only be able to update your resume once your account is created.</p>
+			<p>Please fill in all fields that you are able to, as it helps us keep track of data. All of your information will be kept private.
 			<form>
 			<h2 class="group-title">Account Information</h2>
 			<div class="panel panel-default">
@@ -89,7 +90,7 @@ make the page look nice with CSS.
 							<input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" required>
 						</li>
 						<li clas>
-							<label for="phone-number">Phone number</label>
+							<label for="phone-number">Phone number (for Hackathon updates via text)</label>
 							<input type="text" name="phone-number" id="phone-number" class="form-reg" placeholder="123-456-7890">
 						</li>
 						<li>
@@ -192,7 +193,7 @@ make the page look nice with CSS.
 			</div>
 
 			<div>
-				<input type="submit" value="Submit" class="btn" style="background-color: #000000"	>
+				<input type="submit" value="Submit" class="btn">
 			</div>
 
 			</form>
