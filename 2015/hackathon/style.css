@@ -1,3 +1,41 @@
+/* Jared's additions */
+
+.medical-bg {
+
+}
+
+.reg-title {
+    margin-top: 175px;
+}
+
+.group-title {
+    font-size: 18px;
+}
+
+.button {
+    background-color: #FFFFFF;
+}
+
+.required {
+    color: red;
+}
+
+.form-reg {
+    border: 1px solid #000000 !important;
+    border-radius: 3px !important;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer {
+	padding-top: 100px;
+}
+
+/* End Jared's additions */
+
 *,
 *:before,
 *:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
