@@ -126,7 +126,9 @@ footer .post-list li:first-child{border-top:none;margin:0;padding:0;}
 footer .post-list li h6{font-size:14px;line-height:25px;font-weight:normal;letter-spacing:normal;text-transform:none;margin:0;}
 footer .post-list li em{color:#838383;font-size:12px;font-style:normal;}
 .tagcloud{line-height:25px}
-.color-wrapper{background:#3f8dbf}
+.color-wrapper {
+    background: #0699ab;
+}
 .color-wrapper,
 .color-wrapper p{color:#FFF}
 .color-wrapper h1,
@@ -383,7 +385,7 @@ hr{border:0;border-bottom:1px solid #dadada;margin:60px 0;}
 .social a:hover a:hover i{background-color:#FFF}
 .social a:hover i{color:#FFF}
 .black-wrapper .social li a:hover i{color:#FFF}
-.fullwidthbanner-container{width:100% !important;position:relative;padding:0;max-height:600px !important;overflow:hidden !important;}
+.fullwidthbanner-container{width:100% !important;position:relative;padding:0;max-height:400px !important;overflow:hidden !important;}
 .revolution{background:#FFF;}
 .revolution ul{visibility:hidden;margin:0;list-style:none;}
 .tp-caption.bold{font-size:35px;line-height:1;font-weight:800;color:#F3F3F3;}
