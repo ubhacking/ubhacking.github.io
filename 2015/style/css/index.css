@@ -2,6 +2,18 @@
     font-family: Raleway;
 }
 
+.navbar ul li a{
+    margin-top: 22px;
+    font-weight: 600;
+    font-size: 16px;
+    -webkit-transition: color .5s ease-in;
+    transition: color .5s;
+}
+
+.navbar ul li a:hover {
+    color: #FFF;
+}
+
 .navbar-img {
     margin-top: 10px;
 }
@@ -28,6 +40,7 @@
 }
 
 .btn {
+    margin-right: 5px;
     border-radius: 3px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -60,8 +73,11 @@ body {
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
 .business-header {
+    font-weight: 800;
+    padding-top: 10em;
     height: 500px;
     background: url('../images/art/hackers_art.jpg') center center no-repeat scroll;
+    background-color: #FFFFFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -72,8 +88,16 @@ body {
 
 .tagline {
     text-shadow: 0 0 10px #000;
+    text-decoration: bold;
+    font-size: 35px;
     color: #fff;
     transition: all 0s ease 0s;
+}
+
+.subtitle {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    font-size: 22px;
 }
 
 .img-center {
