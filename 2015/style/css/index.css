@@ -2,6 +2,10 @@
     font-family: Raleway;
 }
 
+.navbar-img {
+    margin-top: 10px;
+}
+
 .contact-link {
     color: #660033;
     -webkit-transition: all 200ms ease-in;
@@ -15,10 +19,11 @@
 }
 
 .thin {
-    margin-top: 60px;
+    margin-top: 65px;
 }
 
 .lead {
+    font-size: 16px;
     color: #FFF;
 }
 
@@ -31,6 +36,12 @@
     border: none;
     padding: 10px 20px;
     font-weight: 800;
+    -webkit-transition: all 209ms ease-in;
+}
+
+.btn:hover {
+    background-color: #616161;
+    color: #FFF;
 }
 
 .blue {
@@ -62,6 +73,7 @@ body {
 .tagline {
     text-shadow: 0 0 10px #000;
     color: #fff;
+    transition: all 0s ease 0s;
 }
 
 .img-center {
