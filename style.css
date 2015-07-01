@@ -46,12 +46,6 @@ footer {
 
 /* End Jared's additions */
 
-/* Alex's additions */
-#bg-img {
-  -webkit-filter: brightness(1.9) grayscale(0.7);
-}
-/* End Alex's additions */
-
 *,
 *:before,
 *:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
