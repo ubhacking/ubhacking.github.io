@@ -1,3 +1,9 @@
+/* Alex's additions */
+#bg-img {
+  -webkit-filter: brightness(1.9) grayscale(0.7);
+}
+/* End Alex's additions */
+
 * {
     font-family: Raleway;
 }
