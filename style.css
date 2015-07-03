@@ -1,4 +1,4 @@
-/* Jared's additions */
+/*/* Jared's additions
 :root {
     background-color: #2c2c2c;
 }
@@ -44,7 +44,7 @@ footer {
 	padding-top: 100px;
 }
 
-/* End Jared's additions */
+/* End Jared's additions
 
 *,
 *:before,
@@ -130,7 +130,7 @@ footer .post-list li h6{font-size:14px;line-height:25px;font-weight:normal;lette
 footer .post-list li em{color:#838383;font-size:12px;font-style:normal;}
 .tagcloud{line-height:25px}
 .color-wrapper {
-    /*background: #71bd29;*/
+    /*background: #71bd29;
     background: #14aac5;
 }
 .color-wrapper,
@@ -1058,4 +1058,4 @@ img{max-width:100%;height:auto;}
     margin:20px 0;
     font-size: 0.75em;
     text-align: center;
-}
+}*/
