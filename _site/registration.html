@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--TODO: make this actually look like good code.
+make labels for the inputs.
+make the page look nice with CSS.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+	    <title>UB Hacking Registration</title>
+
+	    <!-- Bootstrap Core CSS -->
+	    <link href="style/css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="style.css" rel="stylesheet">
+
+	    <!-- Custom Fonts -->
+	    <link href="style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body class="full-layout">
+		<div class="body-wrapper">
+			<div class="yamm navbar basic default black">
+    			<div class="navbar-header">
+      				<div class="container">
+        				<div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand" href="index.html"><img src="style/images/logo.png" data-at2x="style/images/logo@2x.png" alt="" /></a></div>
+        				<div class="collapse navbar-collapse pull-right">
+          					<ul class="nav navbar-nav">
+					            <li class="dropdown"><a href="index.html">Home</a>
+					            </li>
+					            <li class="dropdown"><a href="schedule.html">Schedule</a>
+					            </li>
+					            <li class="dropdown"><a href="signup.html" >Sign up</a>
+					            </li>
+					            <li class="dropdown"><a href="signin.html" >Sign In</a>
+					            </li>
+					            <li class="dropdown"><a href="contact.html">Contact</a>
+					            </li>
+          					</ul>
+        				</div>
+      				</div>
+   			  </div>
+    <!--/.nav-collapse --> 
+  		</div>
+  		</div>
+  <!--/.navbar -->
+  		</div>
+  		<div class="container">
+			<h1 class="reg-title">UB Hacking Registration</h1>
+			<p>Thanks for your interest in UBHacking. You will only be able to update your resume once your account is created.</p>
+			<p>Please fill in all fields that you are able to, as it helps us keep track of data. All of your information will be kept private.
+			<form>
+			<h2 class="group-title">Account Information</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul>
+						<li>
+							<label for="email">Email</label><span class="required"> *</span>
+							<input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com" required autofocus>
+						</li>
+						<li><label for="password">Password</label><span class="required"> *</span>
+							<input type="password" name="password" id="password" class="form-reg" placeholder="Password" required>
+						</li>
+						<li><label for="confirm-password">Confirm password</label><span class="required"> *</span>
+							<input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" requried>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2 class="group-title">Personal Information</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul>
+						<li>
+							<label for="firstname">First Name</label><span class="required"> *</span>
+							<input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" required>
+						</li>	
+						<li>
+							<label for="lastname">Last Name</label><span class="required"> *</span>
+							<input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" required>
+						</li>
+						<li clas>
+							<label for="phone-number">Phone number (for Hackathon updates via text)</label>
+							<input type="text" name="phone-number" id="phone-number" class="form-reg" placeholder="123-456-7890">
+						</li>
+						<li>
+							<label for="sex">Sex</label><span class="required"> *</span>
+							<select name="sex" id="sex" class="form-reg" required>
+								<option value="">Please select one.</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="other">Other</option>
+								<option value="no">Prefer not to answer</option>
+							</select>
+						<li>
+							<label for="school">School</label><span class="required"> *</span>
+							<input type="text" name="school" id="school" class="form-reg" placeholder="School" required></li>
+						<li>
+							<label for="major">Major</label><span class="required"> *</span>
+							<input type="text" name="major" id="major" class="form-reg" placeholder="Major" required></li>
+						<li>
+							<label for="year">Year</label><span class="required"> *</span>
+							<select name="year" id="year" class="form-reg" required>
+								<option value="">Please select one.</option>
+								<option value="freshman">Freshman</option>
+								<option value="sophomore">Sophomore</option>
+								<option value="junior">Junior</option>
+								<option value="senior">Senior</option>
+								<option value="other">Other</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2 class="group-title">Hackathon Stuff</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul>
+						<li>
+							<label for="first-hackathon">Is this your first Hackathon?</label><span class="required"> *</span>
+							<select name="first-hackathon" id="first-hackathon" class="form-reg" required>
+								<option value="">Please select one.</option>
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+						</li>
+						<li>
+							<label for="ware">Are you thinking about working with hardware or software?</label><span class="required"> *</span>
+							<select name="ware" id="ware" class="form-reg" required>
+								<option value="">Please select one.</option>
+								<option value="undecided">Undecided</option>
+								<option value="hardware">Hardware</option>
+								<option value="software">Software</option>
+							</select>
+						</li>
+						<li>
+							<label for="project">What are you building?</label>
+							<textarea name="project" id="project" rows="4" class="form-reg"></textarea>
+						</li>
+						<li>
+							<label for="past-project">Tell us about something you have built in the past.</label>
+							<textarea name="past-project" id="past-project" rows="4" class="form-reg"></textarea>
+						</li>
+						<li>
+							<label for="resume">Resume: (as .pdf)<span class="required"> *</span></label>
+							<input data-label="upload" type="file" name="resume" id="resume" accept="pdf" required>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2 class="group-title">Other</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul>
+						<li>
+							<label for="diet">Do you have any dietary restrictions?</label><span class="required"> *</span>
+							<select name="diet" id="diet" class="form-reg" required>
+								<option value="">Please select one.</option>
+								<option value="none">None</option>
+								<option value="vegetarian">Vegetarian</option>
+								<option value="gluten">Gluten-free</option>
+							</select>
+						</li>
+						<li>
+							<label for="shirt-size">T-Shirt Size</label><span class="required"> *</span>
+							<select name="shirt-size" id="shirt-size" class="form-reg" required>
+								<option value="">Please select one.</option>
+								<option value="XS">XS</option>
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+							</select>
+						</li>
+						<li>
+							<label for="other">Is there anything else we should know about? (Allergies, disabilties, etc.)</label>
+							<textarea name="other" id="other" rows="4" class="form-reg"></textarea>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div>
+				<input type="submit" value="Submit" class="btn">
+			</div>
+
+			</form>
+		</div>
+
+		<!--[if lt IE 9]>
+		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->	
+	</body>
+	<footer></footer>
+<html>
