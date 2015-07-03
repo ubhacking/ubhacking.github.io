@@ -20,44 +20,50 @@ make the page look nice with CSS.
 	    <link href="style/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
-	    <link href="style.css" rel="stylesheet">
+	    <link href="style/css/index.css" rel="stylesheet">
 
 	    <!-- Custom Fonts -->
 	    <link href="style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
+    	rel='stylesheet' type='text/css'>
 	</head>
 	
-	<body class="full-layout">
-		<div class="body-wrapper">
-			<div class="yamm navbar basic default black">
-    			<div class="navbar-header">
-      				<div class="container">
-        				<div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand" href="index.html"><img src="style/images/logo.png" data-at2x="style/images/logo@2x.png" alt="" /></a></div>
-        				<div class="collapse navbar-collapse pull-right">
-          					<ul class="nav navbar-nav">
-					            <li class="dropdown"><a href="index.html">Home</a>
-					            </li>
-					            <li class="dropdown"><a href="schedule.html">Schedule</a>
-					            </li>
-					            <li class="dropdown"><a href="signup.html" >Sign up</a>
-					            </li>
-					            <li class="dropdown"><a href="signin.html" >Sign In</a>
-					            </li>
-					            <li class="dropdown"><a href="contact.html">Contact</a>
-					            </li>
-          					</ul>
-        				</div>
-      				</div>
-   			  </div>
-    <!--/.nav-collapse --> 
-  		</div>
-  		</div>
-  <!--/.navbar -->
-  		</div>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html"><img class="navbar-img"height="72" width="72" src="style/images/logo_white.png" alt="" /></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="registration.html">Register</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
   		<div class="container">
-			<h1 class="reg-title">UB Hacking Registration</h1>
-			<p>Thanks for your interest in UBHacking. You will only be able to update your resume once your account is created.</p>
-			<p>Please fill in all fields that you are able to, as it helps us keep track of data. All of your information will be kept private.
+			<h1 class="reg-title">UB Hacking Registration</h1>	
+			<p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data. Once your account is created, you will only be able to update your resume.</p>
+			<p>All of your data will be kept private.
 			<form>
 			<h2 class="group-title">Account Information</h2>
 			<div class="panel panel-default">
@@ -153,8 +159,18 @@ make the page look nice with CSS.
 							<textarea name="past-project" id="past-project" rows="4" class="form-reg"></textarea>
 						</li>
 						<li>
+							<div>
 							<label for="resume">Resume: (as .pdf)<span class="required"> *</span></label>
 							<input data-label="upload" type="file" name="resume" id="resume" accept="pdf" required>
+							</div>
+						</li>
+						<li>
+							<label for="github">GitHub Username</label>
+							<input type="text" name="github" id="github" placeholder="JaredVargason">
+						</li>
+						<li>
+							<label for="linkedin">LinkedIn Profile URL</label>
+							<input type="URL" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/jaredvargason">
 						</li>
 					</ul>
 				</div>
@@ -185,7 +201,7 @@ make the page look nice with CSS.
 							</select>
 						</li>
 						<li>
-							<label for="other">Is there anything else we should know about? (Allergies, disabilties, etc.)</label>
+							<label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
 							<textarea name="other" id="other" rows="4" class="form-reg"></textarea>
 						</li>
 					</ul>
@@ -193,7 +209,7 @@ make the page look nice with CSS.
 			</div>
 
 			<div>
-				<input type="submit" value="Submit" class="btn">
+				<input type="submit" value="Submit" class="submit">
 			</div>
 
 			</form>
@@ -204,5 +220,10 @@ make the page look nice with CSS.
 		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->	
 	</body>
-	<footer></footer>
+	<footer class="black-wrapper text-center"> 
+        &copy; UBHacking 2015
+        <a href="https://www.facebook.com/UBHacking"><img src="style/images/social-media-icons/PNG 32x32/32x32_facebook.png"></a>
+        <a href="https://twitter.com/ubhacking"><img src="style/images/social-media-icons/PNG 32x32/32x32_twitter.png"></a>
+    </footer>
+
 <html>
