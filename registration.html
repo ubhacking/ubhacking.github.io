@@ -63,8 +63,8 @@ make the page look nice with CSS.
   		<div class="container">
 			<h1 class="reg-title">UB Hacking Registration</h1>	
 			<p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data. Once your account is created, you will only be able to update your resume.</p>
-			<p>All of your data will be kept private.
-			<form method="POST">
+			<p>All of your personal data will be kept private.
+			<form method="post" action="http://localhost:5000/submit" enctype='application/json'>
 			<h2 class="group-title">Account Information</h2>
 			<div class="panel panel-default">
 				<div class="panel-body">
@@ -110,8 +110,8 @@ make the page look nice with CSS.
 							</select>
 						</li>
 						<li>
-							<label for="school">School</label><span class="required"> *</span>
-							<input list="colleges" type="text" name="school" id="school" class="form-reg" placeholder="School" required>
+							<label for="colleges">School</label><span class="required"> *</span>
+							<input list="colleges" type="text" name="colleges" id="school" class="form-reg" placeholder="School" required>
 							<datalist id="colleges">
 								<option value="Unlisted"></option>
 							</datalist>
@@ -239,7 +239,7 @@ make the page look nice with CSS.
 
 }
     <script type="text/javascript" src="style/js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="style/js/bootstrap.min.js"></script>
 
 	<script>
 
@@ -249,7 +249,7 @@ make the page look nice with CSS.
 	    $.getJSON('style/js/colleges.json', function(data) {
 	    //populate the colleges datalist
 	        $(data).each(function() {
-	            collegeOptions = "<option value=\"" + val + "\"></option>";
+	            collegeOptions = "<option value=\"" + this.name + "\"></option>";
 	            $('#colleges').append(collegeOptions);
 	        });
 	    });
