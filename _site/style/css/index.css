@@ -6,6 +6,8 @@
 
 * {
     font-family: Raleway;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.1)
 }
 
 .anim {
@@ -132,4 +134,78 @@ footer {
 
 :root{
     background-color: #2c2c2c;
+}
+
+ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+select, input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+input[type="file"],
+.uneditable-input {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a7a7a;
+    vertical-align: middle;
+    background: #FFF;
+    -webkit-transition: all 200ms ease-in;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid;
+}
+
+textarea {
+    display: inline-block;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a7a7a;
+    vertical-align: middle;
+    background: #FFF;
+    -webkit-transition: all 200ms ease-in;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid;
+}
+
+.reg-title {
+    margin: 60px 0 20px 0;
+}
+
+.required {
+    color: red;
+    font-weight: 800;
+}
+
+.submit {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid;
+    height: 40px;
+    font-weight: 400px;
+    color: #fff;
+    background-color: #14aac5;
 }
