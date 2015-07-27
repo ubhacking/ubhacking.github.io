@@ -1,32 +1,15 @@
-function getSchools() {
-    var collegeOptions;
-
-    $.getJSON('style/js/colleges.json', function(data) {
-
-        $(data).each(function() {
-
-            collegeOptions = "<option value=\'" + this.name + "\'></option>";
-            $('#colleges').append(collegeOptions);
-
-        });
-    });
-}
-
-/*function jsonToDatalist(filepath, id) {
-	var option;
-
-	$.getJSON(filepath, function(data) {
-
-		$(data).each(function() {
-
-			option = "<option value=\'" + this.name + "\'></option>";
-			$(id).append(option);
-
-		});
-	});
-}*/
-
 $(document).ready(function() {
+
+	// setup colleges
+  $.getJSON('/style/js/colleges.json', function(data) {
+  		var collegeOptions;
+      $(data).each(function() {
+
+          collegeOptions = "<option value=\'" + this.name + "\'></option>";
+          $('#colleges').append(collegeOptions);
+
+      });
+  });
 
 	// process the form
 	$('form').submit(function(event) {
