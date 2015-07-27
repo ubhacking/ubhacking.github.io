@@ -17,54 +17,55 @@ make the page look nice with CSS.
 	    <title>UB Hacking Registration</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="style/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
-	    <link href="../style/css/index.css" rel="stylesheet">
+	    <link href="style/css/index.css" rel="stylesheet">
 
 	    <!-- Custom Fonts -->
-	    <link href="../style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
     	rel='stylesheet' type='text/css'>
 	</head>
 	
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/"><img class="navbar-img"height="72" width="72" src="../style/images/logo_white.png" alt="" /></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <!--
-                    <li>
-                        <a href="registration.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="login.html">Login</a>
-                    </li>-->
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
+        	<div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a href="index.html"><img class="navbar-img"height="72" width="72" src="style/images/logo_white.png" alt="" /></a>
+	            </div>
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li>
+	                        <a href="index.html">Home</a>
+	                    </li>
+	                    <!--
+	                    <li>
+	                        <a href="registration.html">Register</a>
+	                    </li>
+	                    <li>
+	                        <a href="login.html">Login</a>
+	                    </li>-->
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
         <!-- /.container -->
-    </nav>
+    	</nav>
+
   		<div class="container">
-			<h1 class="reg-title">UB Hacking Registration</h1>	
-			<p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data. Once your account is created, you will only be able to update your resume.</p>
-			<p>All of your data will be kept private.</p>
-			<form method="POST">
+			<h1 class="reg-title">UB Hacking Registration</h1>
+			<p>Thanks for your interest in UBHacking! Once your account is created, you will be able to edit your registration.</p>
+			<p>Fields marked with a red asterisk (<span class="required">*</span> ) are required, but please fill in all the fields that you are able to HONESTLY in order to keep track of data.</p>
+			<form method="post" action="http://localhost:5000/submit" enctype='application/json'>
 			<h2 class="group-title">Account Information</h2>
 			<div class="panel panel-default">
 				<div class="panel-body">
@@ -76,7 +77,7 @@ make the page look nice with CSS.
 						<li><label for="password">Password</label><span class="required"> *</span>
 							<input type="password" name="password" id="password" class="form-reg" placeholder="Password" required>
 						</li>
-						<li><label for="confirm-password">Confirm password</label><span class="required"> *</span>
+						<!--<li><label for="confirm-password">Confirm password</label><span class="required"> *</span>
 							<input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" requried>
 						</li>
 					</ul>
@@ -108,12 +109,18 @@ make the page look nice with CSS.
 								<option value="other">Other</option>
 								<option value="no">Prefer not to answer</option>
 							</select>
+						</li>
 						<li>
 							<label for="school">School</label><span class="required"> *</span>
-							<input type="text" name="school" id="school" class="form-reg" placeholder="School" required></li>
+							<input list="colleges" type="text" name="school" id="school" class="form-reg" placeholder="School" required>
+							<datalist id="colleges">
+								<option value="Unlisted"></option>
+							</datalist>
+						</li>
 						<li>
 							<label for="major">Major</label><span class="required"> *</span>
-							<input type="text" name="major" id="major" class="form-reg" placeholder="Major" required></li>
+							<input type="text" name="major" id="major" class="form-reg" placeholder="Major" required>
+						</li>
 						<li>
 							<label for="year">Year</label><span class="required"> *</span>
 							<select name="year" id="year" class="form-reg" required>
@@ -134,16 +141,16 @@ make the page look nice with CSS.
 				<div class="panel-body">
 					<ul>
 						<li>
-							<label for="first-hackathon">Is this your first Hackathon?</label><span class="required"> *</span>
-							<select name="first-hackathon" id="first-hackathon" class="form-reg" required>
+							<label for="q1">Is this your first Hackathon?</label><span class="required"> *</span>
+							<select name="q1" id="q1" class="form-reg" required>
 								<option value="">Please select one.</option>
 								<option value="yes">Yes</option>
 								<option value="no">No</option>
 							</select>
 						</li>
 						<li>
-							<label for="ware">Are you thinking about working with hardware or software?</label><span class="required"> *</span>
-							<select name="ware" id="ware" class="form-reg" required>
+							<label for="q2">Are you working with hardware or software?</label><span class="required"> *</span>
+							<select name="q2" id="q2" class="form-reg" required>
 								<option value="">Please select one.</option>
 								<option value="undecided">Undecided</option>
 								<option value="hardware">Hardware</option>
@@ -151,26 +158,26 @@ make the page look nice with CSS.
 							</select>
 						</li>
 						<li>
-							<label for="project">What are you building?</label>
-							<textarea name="project" id="project" rows="4" class="form-reg"></textarea>
+							<label for="q3">What are you building?</label>
+							<textarea name="q3" id="q3" rows="4" class="form-reg"></textarea>
 						</li>
 						<li>
-							<label for="past-project">Tell us about something you have built in the past.</label>
-							<textarea name="past-project" id="past-project" rows="4" class="form-reg"></textarea>
+							<label for="q4">Tell us about something you have built in the past.</label>
+							<textarea name="q4" id="q4" rows="4" class="form-reg"></textarea>
 						</li>
 						<li>
-							<div>
+							<!--<div>
 							<label for="resume">Resume: (as .pdf)<span class="required"> *</span></label>
-							<input data-label="upload" type="file" name="resume" id="resume" accept="pdf" required>
+							<input data-label="upload" type="file" name="resume" id="resume" accept="pdf" class="" required>
 							</div>
 						</li>
 						<li>
 							<label for="github">GitHub Username</label>
-							<input type="text" name="github" id="github" placeholder="JaredVargason">
+							<input type="text" name="github" id="github" placeholder="MalcolmReynolds">
 						</li>
 						<li>
 							<label for="linkedin">LinkedIn Profile URL</label>
-							<input type="URL" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/jaredvargason">
+							<input type="URL" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/MalcolmReynolds">
 						</li>
 					</ul>
 				</div>
@@ -181,8 +188,8 @@ make the page look nice with CSS.
 				<div class="panel-body">
 					<ul>
 						<li>
-							<label for="diet">Do you have any dietary restrictions?</label><span class="required"> *</span>
-							<select name="diet" id="diet" class="form-reg" required>
+							<label for="food">Do you have any dietary restrictions?</label><span class="required"> *</span>
+							<select name="food" id="food" class="form-reg" required>
 								<option value="">Please select one.</option>
 								<option value="none">None</option>
 								<option value="vegetarian">Vegetarian</option>
@@ -190,8 +197,8 @@ make the page look nice with CSS.
 							</select>
 						</li>
 						<li>
-							<label for="shirt-size">T-Shirt Size</label><span class="required"> *</span>
-							<select name="shirt-size" id="shirt-size" class="form-reg" required>
+							<label for="shirt">T-Shirt Size</label><span class="required"> *</span>
+							<select name="shirt" id="shirt" class="form-reg" required>
 								<option value="">Please select one.</option>
 								<option value="XS">XS</option>
 								<option value="S">S</option>
@@ -206,7 +213,7 @@ make the page look nice with CSS.
 						</li>
 					</ul>
 				</div>
-			</div>
+			</div>-->
 
 			<div>
 				<input type="submit" value="Submit" class="submit">
@@ -219,14 +226,47 @@ make the page look nice with CSS.
 		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->	
+		
 	</body>
 	<footer class="black-wrapper text-center"> 
         &copy; UBHacking 2015
-        <a href="https://www.facebook.com/UBHacking"><img src="../style/images/social-media-icons/PNG 32x32/32x32_facebook.png"></a>
-        <a href="https://twitter.com/ubhacking"><img src="../style/images/social-media-icons/PNG 32x32/32x32_twitter.png"></a>
+        <a href="https://www.facebook.com/UBHacking"><img src="style/images/social-media-icons/PNG 32x32/32x32_facebook.png"></a>
+        <a href="https://twitter.com/ubhacking"><img src="style/images/social-media-icons/PNG 32x32/32x32_twitter.png"></a>
     </footer>
 
     <script type="text/javascript" src="style/js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="style/js/registration.js"></script>
+	<script src="style/js/bootstrap.min.js"></script>
+
+	<!--<script>
+
+    function getSchools() {
+	    var collegeOptions;
+
+	    $.getJSON('style/js/colleges.json', function(data) {
+	    //populate the colleges datalist
+	    	/*if (data.length) {
+	    		alert("not empty");
+	    	}
+
+	    	else {
+	    		alert("empty");
+	    	}*/
+
+	        $(data).each(function() {
+
+	            collegeOptions = "<option value=\'" + this.name + "\'></option>";
+	            $('#colleges').append(collegeOptions);
+
+	        });
+	    });
+    }
+
+   
+    </script>
+
+    <script>
+    $(document).ready(getSchools);
+    </script>-->
 
 <html>
