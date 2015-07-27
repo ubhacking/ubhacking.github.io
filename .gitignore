@@ -10,6 +10,13 @@
 /test/version_tmp/
 /tmp/
 
+## stuff alex made for react
+/build/
+/dist/
+/src/
+Gemfile
+Gemfile.lock
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
