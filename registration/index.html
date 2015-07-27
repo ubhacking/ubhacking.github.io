@@ -222,25 +222,9 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <script>
-  function getSchools() {
-    var collegeOptions;
-    $.getJSON('style/js/colleges.json', function(data) {
-            //populate the colleges datalist
-            $(data).each(function() {
-              collegeOptions = "<option value=\"" + this.name + "\"></option>";
-              $('#colleges').append(collegeOptions);
-            });
-          });
-  }
-  </script>
-
-      <!--TEST
-      <script>
-      $(document).ready(getSchools);
-      $('#colleges').append("<option value=\"swag\"></option>")
-    </script>-->
+  
+  <!--   Handle registration -->
+  <script type="text/javascript" src="style/js/registration.js"></script>
 
   </body>
   </html>

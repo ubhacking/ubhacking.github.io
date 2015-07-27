@@ -1,4 +1,5 @@
 /* Alex's additions */
+
 #bg-img {
   -webkit-filter: brightness(1.9) grayscale(0.7);
 }
@@ -8,6 +9,10 @@
     font-family: Raleway;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke: 1px rgba(0,0,0,0.1)
+}
+
+select {
+    -moz-appearance: none;
 }
 
 .anim {
@@ -111,6 +116,7 @@ body {
     transition: all 0s ease 0s;
     opacity: .01;
     -webkit-transition: -webkit-transform 2.5s ease-in-out;
+    -webkit-font-smoothing: antialiased
 }
 
 .subtitle {
@@ -119,6 +125,7 @@ body {
     color: #fff;
     font-size: 22px;
     -webkit-transition: -webkit-transform 2.5s ease-in-out;
+    -webkit-font-smoothing: antialiased
 }
 
 .img-center {
@@ -155,7 +162,6 @@ input[type="url"],
 input[type="search"], 
 input[type="tel"], 
 input[type="color"], 
-input[type="file"],
 .uneditable-input {
     display: inline-block;
     width: 100%;
@@ -171,6 +177,10 @@ input[type="file"],
     border-radius: 3px;
     box-shadow: none;
     border: 1px solid;
+}
+
+input[type="file"] {
+    margin: 0 auto;
 }
 
 textarea {
@@ -208,4 +218,11 @@ textarea {
     font-weight: 400px;
     color: #fff;
     background-color: #14aac5;
+    -webkit-transition: color .5s ease-in;
+    transition: color .5s ease-in;
+    -moz-transition: background-color .5s;
+}
+
+.submit:hover {
+    background-color: #117d90;
 }
