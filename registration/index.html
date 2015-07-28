@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--TODO
+- Code formatting
+- Resume button appearance
+- Waiver appearance?
+-->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,9 +54,9 @@
   </nav>
   <div class="container">
     <h1 class="reg-title">UB Hacking Registration</h1>  
-    <p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data. Once your account is created, you will only be able to update your resume.</p>
-    <p>All of your data will be kept private.</p>
-    <form method="post" action="http://localhost:5000/submit">
+    <p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data.</p>
+    <p><span class="required">*</span> Indicates required field</p>
+    <form method="post">
       <h2 class="group-title">Account Information</h2>
       <div class="panel panel-default">
         <div class="panel-body">
@@ -86,29 +92,27 @@
               <input type="text" name="phone-number" id="phone-number" class="form-reg" placeholder="123-456-7890">
             </li>
             <li>
-              <label for="sex">Sex</label><span class="required"> *</span>
-              <select name="sex" id="sex" class="form-reg" required>
+              <label for="sex">Sex</label>
+              <select name="sex" id="sex" class="form-reg">
                 <option value="">Please select one.</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-                <option value="other">Other</option>
-                <option value="no">Prefer not to answer</option>
+                <option value="unlisted">Not Listed</option>
               </select>
             </li>
             <li>
-              <label>School</label><span class="required"> *</span>
-              <input list="colleges" type="text" name="colleges" id="school" class="form-reg" placeholder="School" required>
+              <label for="schools">School</label><span class="required"> *</span>
+              <input list="colleges" type="text" name="colleges" id="schools"class="form-reg" placeholder="School" required>
               <datalist id="colleges">
                 <option value="Unlisted"></option>
               </datalist>
             </li>
             <li>
-              <label for="unlisted">Unlisted</label>
-              <input type="text" name="unlisted" id="unlisted" class="form-reg" placeholder="Other school">
-            </li>
-            <li>
               <label for="major">Major</label><span class="required"> *</span>
-              <input type="text" name="major" id="major" class="form-reg" placeholder="Major" required>
+              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" required>
+              <datalist id="majors">
+                <option value="Unlisted"></option>
+              </datalist>
             </li>
             <li>
               <label for="year">Year</label><span class="required"> *</span>
@@ -162,11 +166,15 @@
             </li>
             <li>
               <label for="github">GitHub Username</label>
-              <input type="text" name="github" id="github" placeholder="JaredVargason">
+              <input type="text" name="github" id="github" placeholder="MalcolmReynolds">
             </li>
             <li>
               <label for="linkedin">LinkedIn Profile URL</label>
-              <input type="url" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/jaredvargason">
+              <input type="url" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/malcolmreynolds">
+            </li>
+            <li>
+              <label for="website">Personal Website</label>
+              <input type="url" name="website" id="website" placeholder="http://example.com">
             </li>
           </ul>
         </div>
@@ -200,6 +208,10 @@
               <label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
               <textarea name="other" id="other" rows="4" class="form-reg"></textarea>
             </li>
+            <li>
+              <label for="privacy">Privacy Statement/Terms & Conditions</label>
+              <p><input type="checkbox" class="form-reg"> I agree to the terms and conditions for UBHacking 2015, found <a href="#">here</a>.</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -224,7 +236,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
   <!--   Handle registration -->
-  <script type="text/javascript" src="/style/js/registration.js"></script>
+  <script type="text/javascript" src="../style/js/registration.js"></script>
 
   </body>
   </html>

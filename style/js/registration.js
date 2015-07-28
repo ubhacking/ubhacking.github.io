@@ -1,17 +1,8 @@
 $(document).ready(function() {
+	jsonToDatalist('http://localhost:5000/colleges', '#colleges');
+	jsonToDatalist('http://localhost:5000/majors', '#majors');
 
-	// setup colleges
-  $.getJSON('/style/js/colleges.json', function(data) {
-  		var collegeOptions;
-      $(data).each(function() {
-
-          collegeOptions = "<option value=\'" + this.name + "\'></option>";
-          $('#colleges').append(collegeOptions);
-
-      });
-  });
-
-	// process the form
+	/*// process the form
 	$('form').submit(function(event) {
 
 		// get the form data
@@ -38,7 +29,7 @@ $(document).ready(function() {
 				// here we will handle errors and validation messages
 				if ( ! data.success) {
 					
-					/*// handle errors for name ---------------
+					// handle errors for name ---------------
 					if (data.errors.name) {
 						$('#name-group').addClass('has-error'); // add the error class to show red input
 						$('#name-group').append('<div class="help-block">' + data.errors.name + '</div>'); // add the actual error message under our input
@@ -54,7 +45,7 @@ $(document).ready(function() {
 					if (data.errors.superheroAlias) {
 						$('#superhero-group').addClass('has-error'); // add the error class to show red input
 						$('#superhero-group').append('<div class="help-block">' + data.errors.superheroAlias + '</div>'); // add the actual error message under our input
-					}*/
+					}
 
 				} else {
 
@@ -77,8 +68,27 @@ $(document).ready(function() {
 
 		// stop the form from submitting the normal way and refreshing the page
 		event.preventDefault();
-	});
+	});*/
 
 });
 
-/*$(document).ready(jsonToDatalist('style/js/colleges.json', '#colleges'));*/
+function jsonToDatalist(url, id) {
+	$.getJSON(url, function(data) {
+		var options;
+		$(data).each(function() {
+			options = "<option value=\'" + this.name + "\'></option>";
+			$(id).append(options);
+		});
+	});
+}	
+
+//THIS WAS ABSTRACTED INTO jsonToDatalist
+// setup colleges
+  /*$.getJSON('http://localhost:5000/colleges', function(data) {
+  	var collegeOptions;
+      $(data).each(function() {
+        collegeOptions = "<option value=\'" + this.name + "\'></option>";
+        $('#colleges').append(collegeOptions);
+
+      });
+  });*/
