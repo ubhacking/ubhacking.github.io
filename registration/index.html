@@ -88,8 +88,8 @@
               <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" required>
             </li>
             <li class>
-              <label for="phone-number">Phone number (for Hackathon updates via text)</label>
-              <input type="text" name="phone-number" id="phone-number" class="form-reg" placeholder="123-456-7890">
+              <label for="phone">Phone number (for Hackathon updates via text)</label>
+              <input type="text" name="phone" id="phone" class="form-reg" placeholder="123-456-7890">
             </li>
             <li>
               <label for="sex">Sex</label>
@@ -100,6 +100,7 @@
                 <option value="unlisted">Not Listed</option>
               </select>
             </li>
+
             <li>
               <label for="schools">School</label><span class="required"> *</span>
               <input list="colleges" type="text" name="colleges" id="schools"class="form-reg" placeholder="School" required>
@@ -107,6 +108,7 @@
                 <option value="Unlisted"></option>
               </datalist>
             </li>
+
             <li>
               <label for="major">Major</label><span class="required"> *</span>
               <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" required>
@@ -141,37 +143,44 @@
                 <option value="no">No</option>
               </select>
             </li>
+
             <li>
-              <label for="ware">Are you thinking about working with hardware or software?</label><span class="required"> *</span>
-              <select name="ware" id="ware" class="form-reg" required>
+              <label for="project-type">Are you thinking about working with hardware or software?</label><span class="required"> *</span>
+              <select name="project-type" id="project-type" class="form-reg" required>
                 <option value="">Please select one.</option>
                 <option value="undecided">Undecided</option>
                 <option value="hardware">Hardware</option>
                 <option value="software">Software</option>
               </select>
             </li>
+
             <li>
               <label for="project">What are you building?</label>
               <textarea name="project" id="project" rows="4" class="form-reg"></textarea>
             </li>
+
             <li>
               <label for="past-project">Tell us about something you have built in the past.</label>
               <textarea name="past-project" id="past-project" rows="4" class="form-reg"></textarea>
             </li>
+
             <li>
               <div>
                 <label for="resume">Resume: (as .pdf)<span class="required"> *</span></label>
                 <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" required>
               </div>
             </li>
+
             <li>
               <label for="github">GitHub Username</label>
               <input type="text" name="github" id="github" placeholder="MalcolmReynolds">
             </li>
+
             <li>
               <label for="linkedin">LinkedIn Profile URL</label>
               <input type="url" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/malcolmreynolds">
             </li>
+
             <li>
               <label for="website">Personal Website</label>
               <input type="url" name="website" id="website" placeholder="http://example.com">
@@ -193,9 +202,10 @@
                 <option value="gluten">Gluten-free</option>
               </select>
             </li>
+
             <li>
-              <label for="shirt-size">T-Shirt Size</label><span class="required"> *</span>
-              <select name="shirt-size" id="shirt-size" class="form-reg" required>
+              <label for="shirt">T-Shirt Size</label><span class="required"> *</span>
+              <select name="shirt" id="shirt" class="form-reg" required>
                 <option value="">Please select one.</option>
                 <option value="XS">XS</option>
                 <option value="S">S</option>
@@ -204,17 +214,16 @@
                 <option value="XL">XL</option>
               </select>
             </li>
+
             <li>
               <label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
               <textarea name="other" id="other" rows="4" class="form-reg"></textarea>
             </li>
-            <li>
-              <label for="privacy">Privacy Statement/Terms & Conditions</label>
-              <p><input type="checkbox" class="form-reg"> I agree to the terms and conditions for UBHacking 2015, found <a href="#">here</a>.</p>
-            </li>
           </ul>
         </div>
       </div>
+
+      <p class="text-center">By submitting, you agree to the terms and conditions and privacy statement found <a href-"#">here</a>.</p>
 
       <div>
         <input type="submit" value="Submit" class="submit">
