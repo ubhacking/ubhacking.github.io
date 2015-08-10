@@ -103,8 +103,6 @@ html {
 }
 
 .main-title {
-    opacity: .01;
-    text-shadow: 0 0 10px #000;
     color: #fff;
     -webkit-transition: -webkit-transform 2.5s ease-in-out;
     -webkit-font-smoothing: antialiased
