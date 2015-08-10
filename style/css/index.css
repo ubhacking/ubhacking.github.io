@@ -93,22 +93,25 @@ html {
     -o-background-size: cover;}
 
 #tagline {
-    font-size: 60px;
+    font-size: 35px;
     text-decoration: bold;
+    transition: all 0s ease 0s;
 }
 
 .subtitle {
-    font-size: 36px;
+    font-size: 22px;
 }
 
 .main-title {
+    opacity: .01;
+    text-shadow: 0 0 10px #000;
     color: #fff;
     -webkit-transition: -webkit-transform 2.5s ease-in-out;
     -webkit-font-smoothing: antialiased
 }
 
 .title-margin {
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .img-center {
