@@ -95,7 +95,6 @@ html {
 #tagline {
     font-size: 60px;
     text-decoration: bold;
-    transition: all 0s ease 0s;
 }
 
 .subtitle {
