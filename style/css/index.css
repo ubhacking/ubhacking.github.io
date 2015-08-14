@@ -19,6 +19,10 @@ select {
     -webkit-transform:translate(0px, -100px);
 }
 
+.anim-2 {
+    -webkit-transform:translate(0px, -125px);
+}
+
 .navbar ul li a{
     margin-top: 22px;
     font-weight: 600;
@@ -115,17 +119,36 @@ body {
     color: #fff;
     transition: all 0s ease 0s;
     opacity: .01;
+    font-weight: bold;
     -webkit-transition: -webkit-transform 2.5s ease-in-out;
     -webkit-font-smoothing: antialiased
 }
 
 .subtitle {
     opacity: .01;
+    font-weight: bold;
     text-shadow: 0 0 10px #000;
     color: #fff;
     font-size: 22px;
     -webkit-transition: -webkit-transform 2.5s ease-in-out;
     -webkit-font-smoothing: antialiased
+}
+
+.subtitle-btn {
+    margin-right: 5px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #616161;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 800;
+    -webkit-transition: all 209ms ease-in;
+}
+
+.subtitle-btn:hover {
+
 }
 
 .img-center {
