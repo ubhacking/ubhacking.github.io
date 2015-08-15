@@ -36,7 +36,7 @@ $(document).ready(function() {
 		// process the form
 		$.ajax({
 			type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-			url 		: 'http://localhost:5000/registration/submit', // the url where we want to POST
+			url 		: 'http://localhost:5000/registration/add_hacker', // the url where we want to POST
 			data 		: formData, // our data object
 			dataType 	: 'application/json', // what type of data do we expect back from the server
 			encode 		: true
