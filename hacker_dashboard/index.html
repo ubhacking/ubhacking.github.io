@@ -131,14 +131,6 @@ function validate() {
             <li><label for="confirm-password">Confirm password</label><span class=""> *</span>
               <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" disabled="true" >
             </li>
-          </ul>
-        </div>
-      </div>
-
-      <h2 class="group-title">Personal Information</h2>
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
             <li>
               <label for="firstname">First Name</label><span class=""> *</span>
               <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" disabled="true" >
@@ -160,7 +152,6 @@ function validate() {
                 <option value="unlisted">Not Listed</option>
               </select>
             </li>
-
             <li>
               <label for="schools">School</label><span class=""> *</span>
               <input list="colleges" type="text" name="colleges" id="school"class="form-reg" placeholder="School" disabled="true">
@@ -187,14 +178,7 @@ function validate() {
                 <option value="other">Other</option>
               </select>
             </li>
-          </ul>
-        </div>
-      </div>
-
-      <h2 class="group-title">Hackathon Stuff</h2>
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
+      
             <li>
               <label for="first-hackathon">Is this your first Hackathon?</label><span class=""> *</span>
               <select name="first-hackathon" id="first-hackathon" class="form-reg" disabled="true">
@@ -238,14 +222,7 @@ function validate() {
               <label for="website">Personal Website</label>
               <input type="url" name="website" id="website" placeholder="http://example.com" disabled="true">
             </li>
-          </ul>
-        </div>
-      </div>
 
-      <h2 class="group-title">Other</h2>
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
             <li>
               <label for="diet">Do you have any dietary restrictions?</label><span class=""> *</span>
               <select name="diet" id="diet" class="form-reg" disabled="true">
@@ -272,15 +249,32 @@ function validate() {
               <label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
               <textarea name="other" id="other" rows="4" class="form-reg" disabled="true"></textarea>
             </li>
+
+            <li>
+              <input type=button value="Edit" class="submit" onclick="return validate()">
+            </li>
           </ul>
         </div>
       </div>
-      <div>
-        <input type=button value="Edit" class="submit" onclick="return validate()">
-        <input type="submit" value="Submit" class="submit">
-      </div>
-
     </form>
+    <!-- Separating resumes from the rest of the account detail -->
+    <h2 class="group-title"> Resume </h2>
+     <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li>
+              <div>
+              <!-- update or view resume here -->
+                <p> You can view or update resume here. </p>
+                <label for="resume">Resume: (as .pdf)<span class=""> *</span></label>
+
+                <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf">
+                <input type="submit" value="View" class="submit">
+                <input type="submit" value="Submit" class="submit">
+              </div>
+            </li>
+        </div>
+      </div>
   </div>
 
   <footer class="black-wrapper text-center"> 
