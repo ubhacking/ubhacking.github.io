@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>UB Hacking - Dashboard</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
+  rel='stylesheet' type='text/css'>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link href="../style/css/index.css" rel="stylesheet">
+<script type="text/javascript">
+function validate() {
+    x=document.getElementById("email")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("password")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("confirm-password")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("firstname")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("lastname")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("phone")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("sex")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("school")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("major")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("year")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("first-hackathon")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("project-type")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("project")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("past-project")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("github")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("linkedin")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("website")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("diet")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("shirt")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("other")
+    x.disabled = !x.disabled;
+}
+</script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/"><img class="navbar-img" height="72" width="72" src="../style/images/logo_white.png" alt=""></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div class="container">
+    <h1 class="reg-title">Dashboard</h1>  
+    <h2 class="group-title"> Status </h2>
+     <div class="panel panel-default">
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit volutpat mi, eget condimentum nunc cursus in. Etiam tincidunt dictum libero, sed blandit sapien ullamcorper eu. Ut erat ex, venenatis posuere venenatis vitae, volutpat vel velit. Curabitur convallis velit ut erat porttitor posuere. Nullam in faucibus eros, ac euismod nulla. Quisque iaculis dolor nec porttitor tristique. Etiam tempor nisi enim, et rhoncus massa elementum nec.</p>
+        </div>
+      </div>
+    <form method="post">
+      <h2 class="group-title">Account Information</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li>
+              <label for="email">Email</label><span class=""> *</span>
+              <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com" disabled="true" autofocus>
+            </li>
+            <li><label for="password">Password</label><span class=""> *</span>
+              <input type="password" name="password" id="password" class="form-reg" placeholder="Password" disabled="true" >
+            </li>
+            <li><label for="confirm-password">Confirm password</label><span class=""> *</span>
+              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" disabled="true" >
+            </li>
+            <li>
+              <label for="firstname">First Name</label><span class=""> *</span>
+              <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" disabled="true" >
+            </li> 
+            <li>
+              <label for="lastname">Last Name</label><span class=""> *</span>
+              <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" disabled="true" >
+            </li>
+            <li class>
+              <label for="phone">Phone number (for Hackathon updates via text)</label>
+              <input type="text" name="phone" id="phone" class="form-reg" placeholder="123-456-7890" disabled="true">
+            </li>
+            <li>
+              <label for="sex">Sex</label>
+              <select name="sex" id="sex" class="form-reg" disabled="true">
+                <option value="">Please select one.</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unlisted">Not Listed</option>
+              </select>
+            </li>
+            <li>
+              <label for="schools">School</label><span class=""> *</span>
+              <input list="colleges" type="text" name="colleges" id="school"class="form-reg" placeholder="School" disabled="true">
+              <datalist id="colleges">
+                <option value="Unlisted"></option>
+              </datalist>
+            </li>
+
+            <li>
+              <label for="major">Major</label><span class=""> *</span>
+              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" disabled="true">
+              <datalist id="major">
+                <option value="Unlisted"></option>
+              </datalist>
+            </li>
+            <li>
+              <label for="year">Year</label><span class=""> *</span>
+              <select name="year" id="year" class="form-reg" disabled="true" >
+                <option value="">Please select one.</option>
+                <option value="freshman">Freshman</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+                <option value="other">Other</option>
+              </select>
+            </li>
+      
+            <li>
+              <label for="first-hackathon">Is this your first Hackathon?</label><span class=""> *</span>
+              <select name="first-hackathon" id="first-hackathon" class="form-reg" disabled="true">
+                <option value="">Please select one.</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </li>
+
+            <li>
+              <label for="project-type">Are you thinking about working with hardware or software?</label><span class=""> *</span>
+              <select name="project-type" id="project-type" class="form-reg" disabled="true">
+                <option value="">Please select one.</option>
+                <option value="undecided">Undecided</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+              </select>
+            </li>
+
+            <li>
+              <label for="project">What are you building?</label>
+              <textarea name="project" id="project" rows="4" class="form-reg"disabled="true"></textarea>
+            </li>
+
+            <li>
+              <label for="past-project">Tell us about something you have built in the past.</label>
+              <textarea name="past-project" id="past-project" rows="4" class="form-reg" disabled="true"></textarea>
+            </li>
+
+            <li>
+              <label for="github">GitHub Username</label>
+              <input type="text" name="github" id="github" placeholder="MalcolmReynolds" disabled="true">
+            </li>
+
+            <li>
+              <label for="linkedin">LinkedIn Profile URL</label>
+              <input type="url" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/malcolmreynolds" disabled="true">
+            </li>
+
+            <li>
+              <label for="website">Personal Website</label>
+              <input type="url" name="website" id="website" placeholder="http://example.com" disabled="true">
+            </li>
+
+            <li>
+              <label for="diet">Do you have any dietary restrictions?</label><span class=""> *</span>
+              <select name="diet" id="diet" class="form-reg" disabled="true">
+                <option value="">Please select one.</option>
+                <option value="none">None</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="gluten">Gluten-free</option>
+              </select>
+            </li>
+
+            <li>
+              <label for="shirt">T-Shirt Size</label><span class=""> *</span>
+              <select name="shirt" id="shirt" class="form-reg" disabled="true">
+                <option value="">Please select one.</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </li>
+
+            <li>
+              <label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
+              <textarea name="other" id="other" rows="4" class="form-reg" disabled="true"></textarea>
+            </li>
+
+            <li>
+              <input type=button value="Edit" class="submit" onclick="return validate()">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+    <!-- Separating resumes from the rest of the account detail -->
+    <h2 class="group-title"> Resume </h2>
+     <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li>
+              <div>
+              <!-- update or view resume here -->
+                <p> You can view or update resume here. </p>
+                <label for="resume">Resume: (as .pdf)<span class=""> *</span></label>
+
+                <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf">
+                <input type="submit" value="View" class="submit">
+                <input type="submit" value="Submit" class="submit">
+              </div>
+            </li>
+        </div>
+      </div>
+  </div>
+
+  <footer class="black-wrapper text-center"> 
+    &copy; UBHacking 2015
+    <a href="https://www.facebook.com/UBHacking"><img src="../style/images/32x32_facebook.png" alt=""></a>
+    <a href="https://twitter.com/ubhacking"><img src="../style/images/32x32_twitter.png" alt=""></a>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <!--   Handle registration -->
+  <script type="text/javascript" src="../style/js/registration.js"></script>
+
+</script>
+
+
+  </body>
+  </html>
