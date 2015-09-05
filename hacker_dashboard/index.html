@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--TODO
-- Code formatting
-- Resume button appearance
-- Waiver appearance?
--->
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>UB Hacking Registration</title>
+  <title>UB Hacking - Dashboard</title>
 
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
   rel='stylesheet' type='text/css'>
@@ -115,9 +109,13 @@ function validate() {
     <!-- /.container -->
   </nav>
   <div class="container">
-    <h1 class="reg-title">UB Hacking Registration</h1>  
-    <p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data.</p>
-    <p><span class="">*</span> Indicates  field</p>
+    <h1 class="reg-title">Dashboard</h1>  
+    <h2 class="group-title"> Status </h2>
+     <div class="panel panel-default">
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit volutpat mi, eget condimentum nunc cursus in. Etiam tincidunt dictum libero, sed blandit sapien ullamcorper eu. Ut erat ex, venenatis posuere venenatis vitae, volutpat vel velit. Curabitur convallis velit ut erat porttitor posuere. Nullam in faucibus eros, ac euismod nulla. Quisque iaculis dolor nec porttitor tristique. Etiam tempor nisi enim, et rhoncus massa elementum nec.</p>
+        </div>
+      </div>
     <form method="post">
       <h2 class="group-title">Account Information</h2>
       <div class="panel panel-default">
@@ -227,13 +225,6 @@ function validate() {
             </li>
 
             <li>
-              <div>
-                <label for="resume">Resume: (as .pdf)<span class=""> *</span></label>
-                <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" disabled="true">
-              </div>
-            </li>
-
-            <li>
               <label for="github">GitHub Username</label>
               <input type="text" name="github" id="github" placeholder="MalcolmReynolds" disabled="true">
             </li>
@@ -284,11 +275,8 @@ function validate() {
           </ul>
         </div>
       </div>
-
-      <p class="text-center">By submitting, you agree to the terms and conditions and privacy statement found <a href-"#">here</a>.</p>
-
       <div>
-        <input type=button value="Edit" onclick="return validate()">
+        <input type=button value="Edit" class="submit" onclick="return validate()">
         <input type="submit" value="Submit" class="submit">
       </div>
 
