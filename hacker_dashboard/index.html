@@ -63,26 +63,26 @@
               <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com" disabled="true" autofocus required>
             </li>
             <li><label for="password">Password</label><span class=""> *</span>
-              <input type="password" name="password" id="password" class="form-reg" placeholder="Password" disabled="true" >
+              <input type="password" name="password" id="password" class="form-reg" placeholder="Password" disabled="true" required>
             </li>
             <li><label for="confirm-password">Confirm password</label><span class=""> *</span>
-              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" disabled="true" >
+              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" disabled="true" required>
             </li>
             <li>
               <label for="firstname">First Name</label><span class=""> *</span>
-              <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" disabled="true" >
+              <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" disabled="true" required>
             </li> 
             <li>
               <label for="lastname">Last Name</label><span class=""> *</span>
-              <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" disabled="true" >
+              <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" disabled="true" required>
             </li>
             <li class>
               <label for="phone">Phone number (for Hackathon updates via text)</label>
-              <input type="text" name="phone" id="phone" class="form-reg" placeholder="123-456-7890" disabled="true">
+              <input type="text" name="phone" id="phone" class="form-reg" placeholder="123-456-7890" disabled="true" required>
             </li>
             <li>
               <label for="sex">Sex</label>
-              <select name="sex" id="sex" class="form-reg" disabled="true">
+              <select name="sex" id="sex" class="form-reg" disabled="true" required>
                 <option value="">Please select one.</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -91,7 +91,7 @@
             </li>
             <li>
               <label for="schools">School</label><span class=""> *</span>
-              <input list="colleges" type="text" name="colleges" id="school"class="form-reg" placeholder="School" disabled="true">
+              <input list="colleges" type="text" name="colleges" id="school"class="form-reg" placeholder="School" disabled="true" required>
               <datalist id="colleges">
                 <option value="Unlisted"></option>
               </datalist>
@@ -99,14 +99,14 @@
 
             <li>
               <label for="major">Major</label><span class=""> *</span>
-              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" disabled="true">
+              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" disabled="true" required>
               <datalist id="major">
                 <option value="Unlisted"></option>
               </datalist>
             </li>
             <li>
               <label for="year">Year</label><span class=""> *</span>
-              <select name="year" id="year" class="form-reg" disabled="true" >
+              <select name="year" id="year" class="form-reg" disabled="true" required>
                 <option value="">Please select one.</option>
                 <option value="freshman">Freshman</option>
                 <option value="sophomore">Sophomore</option>
@@ -118,7 +118,7 @@
       
             <li>
               <label for="first-hackathon">Is this your first Hackathon?</label><span class=""> *</span>
-              <select name="first-hackathon" id="first-hackathon" class="form-reg" disabled="true">
+              <select name="first-hackathon" id="first-hackathon" class="form-reg" disabled="true" required>
                 <option value="">Please select one.</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -162,7 +162,7 @@
 
             <li>
               <label for="diet">Do you have any dietary restrictions?</label><span class=""> *</span>
-              <select name="diet" id="diet" class="form-reg" disabled="true">
+              <select name="diet" id="diet" class="form-reg" disabled="true" required>
                 <option value="">Please select one.</option>
                 <option value="none">None</option>
                 <option value="vegetarian">Vegetarian</option>
@@ -172,7 +172,7 @@
 
             <li>
               <label for="shirt">T-Shirt Size</label><span class=""> *</span>
-              <select name="shirt" id="shirt" class="form-reg" disabled="true">
+              <select name="shirt" id="shirt" class="form-reg" disabled="true" required>
                 <option value="">Please select one.</option>
                 <option value="XS">XS</option>
                 <option value="S">S</option>
