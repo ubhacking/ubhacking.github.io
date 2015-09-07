@@ -66,12 +66,20 @@ select {
 .blue {
     padding: 40px 0px 40px;
     font-size: 16px;
-    color: #212121;
-    background-color: #CFD8DC;
+    color: #FFF;
+    background-color: #607D8B;
 }
 
 .navbar .container {
     height: 7em;
+}
+
+html {
+    background: url('../images/background_full.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 body {
@@ -85,12 +93,13 @@ body {
 }
 
 .home-title {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: bold;
 }
 
 .home-subtitle {
-    font-size: 22px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .img-center {
