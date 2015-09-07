@@ -21,7 +21,7 @@
 <script type="text/javascript">
 
 //Disable and enable fields to edit
-function validate() {
+function disable_fields() {
     x=document.getElementById("email")
     x.disabled = !x.disabled;
 
@@ -165,7 +165,7 @@ function validateForm() {
           <ul>
             <li>
               <label for="email">Email</label><span class=""> *</span>
-              <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com" disabled="true" autofocus>
+              <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com" disabled="true" autofocus required>
             </li>
             <li><label for="password">Password</label><span class=""> *</span>
               <input type="password" name="password" id="password" class="form-reg" placeholder="Password" disabled="true" >
@@ -293,7 +293,7 @@ function validateForm() {
             </li>
 
             <li>
-              <input type=button value="Edit" class="submit" onclick="return validate()">
+              <input type=button value="Edit" class="submit" onclick="return disable_fields()">
             </li>
           </ul>
         </div>

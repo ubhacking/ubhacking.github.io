@@ -101,6 +101,109 @@ function jsonToDatalist(url, id) {
 	});
 }	
 
+// Stuff added by Gela
+//Disable and enable fields to edit
+function disable_fields() {
+    x=document.getElementById("email")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("password")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("confirm-password")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("firstname")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("lastname")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("phone")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("sex")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("school")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("major")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("year")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("first-hackathon")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("project-type")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("project")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("past-project")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("github")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("linkedin")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("website")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("diet")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("shirt")
+    x.disabled = !x.disabled;
+
+    x=document.getElementById("other")
+    x.disabled = !x.disabled;
+}
+
+// Validate all the fields
+function validateForm() {
+
+    var is_valid;
+    // An array of all the fields that must be filled out
+    var required_fields = {
+      var email = document.forms["hacker_profile"]["email"].value;
+      var password = document.forms["hacker_profile"]["password"].value;
+      var confirm-password = document.forms["hacker_profile"]["confirm-password"].value;
+      var firstname = document.forms["hacker_profile"]["firstname"].value;
+      var lastname = document.forms["hacker_profile"]["lastname"].value;
+      var school = document.forms["hacker_profile"]["school"].value;
+      var major = document.forms["hacker_profile"]["major"].value;
+      var year = document.forms["hacker_profile"]["year"].value;
+      var first-hackathon = document.forms["hacker_profile"]["first-hackathon"].value;
+      var project-type = document.forms["hacker_profile"]["project-type"].value;
+      var diet = document.forms["hacker_profile"]["diet"].value;
+      var shirt = document.forms["hacker_profile"]["shirt"].value;
+    }
+
+    var counter = 0;
+
+    for (var i = 0; i < required_fields.length; i++){
+      console.log(required_fields[i].x); //Test to print it out
+      if(x == null || x == "") 
+      {
+        ++counter;
+        alert(required_fields[i].x + "must be field out.");
+      }
+      is_valid =  counter > 0 ? true : false;
+    }
+
+    if (document.forms["hacker_profile"]["password"] != document.forms["hacker_profile"]["confirm-password"]) {
+      is_valid = false;
+    }
+
+    return is_valid;
+}
+
 //THIS WAS ABSTRACTED INTO jsonToDatalist
 // setup colleges
   /*$.getJSON('http://localhost:5000/colleges', function(data) {
