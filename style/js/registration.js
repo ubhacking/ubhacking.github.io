@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	jsonToDatalist('http://localhost:5000/registration/colleges', '#colleges');
 	jsonToDatalist('http://localhost:5000/registration/majors', '#majors');
 
@@ -6,12 +7,12 @@ $(document).ready(function() {
 	// file.
 	$('form').submit(function(event) {
 
-		// get the form data
+		// get the- form data
 		// there are many ways to get this data using jQuery (you can use the class or id also)
 		var formData = {
 			'email' 			: $('input[name=email]').val(),
-			'password'			: $('input[name=password').val(),
-			'confirm-password'	: $('input[name=confirm-password').val(),
+			'password'			: $('input[name=password]').val(),
+			'confirm-password'	: $('input[name=confirm-password]').val(),
 			'firstname' 		: $('input[name=firstname]').val(),
 			'lastname'			: $('input[name=lastname]').val(),
 			'phone'				: $('input[name=phone]').val(),
@@ -91,6 +92,18 @@ $(document).ready(function() {
 });
 
 //method used to populate datalists from a JSON array
+function checkPasswordsMatch() {
+
+	if ($('input[name=password]').val() === $('input[name=confirm-password]').val()) {
+		$("#confirm-password-header").text("Passwords match :)");
+	}
+
+	else {
+		$("#confirm-password-header").text("Passwords do not match :(");
+	}
+
+}
+
 function jsonToDatalist(url, id) {
 	$.getJSON(url, function(data) {
 		var options;
@@ -163,45 +176,6 @@ function disable_fields() {
 
     x=document.getElementById("other")
     x.disabled = !x.disabled;
-}
-
-// Validate all the fields
-function validateForm() {
-
-    var is_valid;
-    // An array of all the fields that must be filled out
-    var required_fields = {
-      var email = document.forms["hacker_profile"]["email"].value;
-      var password = document.forms["hacker_profile"]["password"].value;
-      var confirm-password = document.forms["hacker_profile"]["confirm-password"].value;
-      var firstname = document.forms["hacker_profile"]["firstname"].value;
-      var lastname = document.forms["hacker_profile"]["lastname"].value;
-      var school = document.forms["hacker_profile"]["school"].value;
-      var major = document.forms["hacker_profile"]["major"].value;
-      var year = document.forms["hacker_profile"]["year"].value;
-      var first-hackathon = document.forms["hacker_profile"]["first-hackathon"].value;
-      var project-type = document.forms["hacker_profile"]["project-type"].value;
-      var diet = document.forms["hacker_profile"]["diet"].value;
-      var shirt = document.forms["hacker_profile"]["shirt"].value;
-    }
-
-    var counter = 0;
-
-    for (var i = 0; i < required_fields.length; i++){
-      console.log(required_fields[i].x); //Test to print it out
-      if(x == null || x == "") 
-      {
-        ++counter;
-        alert(required_fields[i].x + "must be filld out.");
-      }
-      is_valid =  counter > 0 ? true : false;
-    }
-
-    if (document.forms["hacker_profile"]["password"] != document.forms["hacker_profile"]["confirm-password"]) {
-      is_valid = false;
-    }
-
-    return is_valid;
 }
 
 //THIS WAS ABSTRACTED INTO jsonToDatalist

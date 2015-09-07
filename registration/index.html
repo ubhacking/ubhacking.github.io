@@ -69,7 +69,8 @@
               <input type="password" name="password" id="password" class="form-reg" placeholder="Password" >
             </li>
             <li><label for="confirm-password">Confirm password</label><span class=""> *</span>
-              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" >
+              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" onChange="checkPasswordsMatch();" >
+              <p id="confirm-password-header"></p>
             </li>
           </ul>
         </div>
