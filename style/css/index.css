@@ -64,9 +64,9 @@ select {
 
 /*changed color of page content bar*/
 .blue {
+    padding: 40px 0px 40px;
     font-size: 16px;
     color: #212121;
-    height: 225px;
     background-color: #CFD8DC;
 }
 
@@ -78,27 +78,17 @@ body {
     padding-top: 7em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-#tagline {
+.home-title {
     font-size: 35px;
-    text-decoration: bold;
-    transition: all 0s ease 0s;
+    font-weight: bold;
 }
 
-.subtitle {
+.home-subtitle {
     font-size: 22px;
 }
 
-.main-title {
-    opacity: .01;
-    font-weight: bold;
-    text-shadow: 0 0 10px #000;
-    color: #fff;
-    -webkit-transition: -webkit-transform 2.5s ease-in-out;
-    -webkit-font-smoothing: antialiased
-}
-
 .title-margin {
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
 .img-center {
