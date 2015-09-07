@@ -192,7 +192,7 @@ function validateForm() {
       if(x == null || x == "") 
       {
         ++counter;
-        alert(required_fields[i].x + "must be field out.");
+        alert(required_fields[i].x + "must be filld out.");
       }
       is_valid =  counter > 0 ? true : false;
     }
