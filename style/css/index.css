@@ -84,8 +84,14 @@ body {
     padding-top: 7em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+#scroll {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
 .home-title {
-    font-size: 35px;
+    font-size: 48px;
     font-weight: bold;
 }
 
@@ -93,14 +99,15 @@ body {
     font-size: 22px;
 }
 
-.title-margin {
-    margin-top: 20px;
-}
-
 .img-center {
     margin: 0 auto;
 }
 
+.title-margin {
+    margin-top: 15%;
+}
+
+/*alex, changed footer color*/
 footer {
     padding-top: 50px;
     color: #FFFFFF;
@@ -248,22 +255,9 @@ body{
     margin-top: 10px;
 }
 
-.login input[type=button]{
-
-
-    /* NEW */
-    width: 250px;
-    height: 35px;
-    border-radius: 3px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    background-color: #FFF;
-    color: #616161;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 800;
-    -webkit-transition: all 209ms ease-in;
+.full-screen {
+/*  height: 100vh;*/
+/*  set using javascript */
 }
 
 .login input[type=button]:hover{
