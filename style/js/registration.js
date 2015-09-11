@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	// process the form: sends json of everything except resume via AJAX and separately uploads
 	// file.
-	$('form').submit(function(event) {
+	/*$('form').submit(function(event) {
 
 		// get the- form data
 		// there are many ways to get this data using jQuery (you can use the class or id also)
@@ -58,12 +58,12 @@ $(document).ready(function() {
 						
 					}
 					
-					/*
+					
 					// handle errors for email --------------- EXAMPLE
 					if (data.errors.email) {
 						$('#email-group').addClass('has-error'); // add the error class to show red input
 						$('#email-group').append('<div class="help-block">' + data.errors.email + '</div>'); // add the actual error message under our input
-					}*/
+					}
 
 				} else {
 					alert("success");
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 		// stop the form from submitting the normal way and refreshing the page
 		event.preventDefault();
-	});
+	});*/
 
 });
 
@@ -177,14 +177,3 @@ function disable_fields() {
     x=document.getElementById("other")
     x.disabled = !x.disabled;
 }
-
-//THIS WAS ABSTRACTED INTO jsonToDatalist
-// setup colleges
-  /*$.getJSON('http://localhost:5000/colleges', function(data) {
-  	var collegeOptions;
-      $(data).each(function() {
-        collegeOptions = "<option value=\'" + this.name + "\'></option>";
-        $('#colleges').append(collegeOptions);
-
-      });
-  });*/
