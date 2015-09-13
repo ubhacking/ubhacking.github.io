@@ -38,7 +38,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/"><img class="navbar-img" height="72" width="72" src="../style/images/logo_blue.png" alt=""></a>
+        <a href="/"><img class="navbar-img" height="72" width="72" src="../style/images/logo_white.png" alt=""></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,21 +55,21 @@
   <div class="container">
     <h1 class="reg-title">UB Hacking Registration</h1>  
     <p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data.</p>
-    <p><span class="">*</span> Indicates  field</p>
-    <form method="post">
+    <p><span class="">*</span> Indicates required field</p>
+    <form method="post" action="http://127.0.0.1:5000/registration/add_hacker" enctype="multipart/form-data">
       <h2 class="group-title">Account Information</h2>
       <div class="panel panel-default">
         <div class="panel-body">
           <ul>
             <li>
               <label for="email">Email</label><span class=""> *</span>
-              <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com"  autofocus>
+              <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com"  required autofocus>
             </li>
             <li><label for="password">Password</label><span class=""> *</span>
-              <input type="password" name="password" id="password" class="form-reg" placeholder="Password" >
+              <input type="password" name="password" id="password" class="form-reg" placeholder="Password" required>
             </li>
             <li><label for="confirm-password">Confirm password</label><span class=""> *</span>
-              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" >
+              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" required>
             </li>
           </ul>
         </div>
@@ -81,11 +81,11 @@
           <ul>
             <li>
               <label for="firstname">First Name</label><span class=""> *</span>
-              <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" >
+              <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" required>
             </li> 
             <li>
               <label for="lastname">Last Name</label><span class=""> *</span>
-              <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" >
+              <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" required>
             </li>
             <li class>
               <label for="phone">Phone number (for Hackathon updates via text)</label>
@@ -103,7 +103,7 @@
 
             <li>
               <label for="schools">School</label><span class=""> *</span>
-              <input list="colleges" type="text" name="colleges" id="schools"class="form-reg" placeholder="School" >
+              <input list="colleges" type="text" name="colleges" id="schools"class="form-reg" placeholder="School" required>
               <datalist id="colleges">
                 <option value="Unlisted"></option>
               </datalist>
@@ -111,14 +111,14 @@
 
             <li>
               <label for="major">Major</label><span class=""> *</span>
-              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" >
+              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" required>
               <datalist id="majors">
                 <option value="Unlisted"></option>
               </datalist>
             </li>
             <li>
               <label for="year">Year</label><span class=""> *</span>
-              <select name="year" id="year" class="form-reg" >
+              <select name="year" id="year" class="form-reg" required>
                 <option value="">Please select one.</option>
                 <option value="freshman">Freshman</option>
                 <option value="sophomore">Sophomore</option>
@@ -137,7 +137,7 @@
           <ul>
             <li>
               <label for="first-hackathon">Is this your first Hackathon?</label><span class=""> *</span>
-              <select name="first-hackathon" id="first-hackathon" class="form-reg" >
+              <select name="first-hackathon" id="first-hackathon" class="form-reg" required>
                 <option value="">Please select one.</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -146,7 +146,7 @@
 
             <li>
               <label for="project-type">Are you thinking about working with hardware or software?</label><span class=""> *</span>
-              <select name="project-type" id="project-type" class="form-reg" >
+              <select name="project-type" id="project-type" class="form-reg" required>
                 <option value="">Please select one.</option>
                 <option value="undecided">Undecided</option>
                 <option value="hardware">Hardware</option>
@@ -167,7 +167,7 @@
             <li>
               <div>
                 <label for="resume">Resume: (as .pdf)<span class=""> *</span></label>
-                <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" >
+                <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" required>
               </div>
             </li>
 
@@ -195,8 +195,8 @@
           <ul>
             <li>
               <label for="diet">Do you have any dietary restrictions?</label><span class=""> *</span>
-              <select name="diet" id="diet" class="form-reg" >
-                <option value="">Please select one.</option>
+              <select name="diet" id="diet" class="form-reg" required>
+                <option value="" disabled>Please select one.</option>
                 <option value="none">None</option>
                 <option value="vegetarian">Vegetarian</option>
                 <option value="gluten">Gluten-free</option>
@@ -205,8 +205,8 @@
 
             <li>
               <label for="shirt">T-Shirt Size</label><span class=""> *</span>
-              <select name="shirt" id="shirt" class="form-reg" >
-                <option value="">Please select one.</option>
+              <select name="shirt" id="shirt" class="form-reg" required>
+                <option value="" disabled>Please select one.</option>
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -247,5 +247,5 @@
   <!--   Handle registration -->
   <script type="text/javascript" src="../style/js/registration.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>
