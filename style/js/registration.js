@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  jsonToDatalist('http://localhost:5000/registration/colleges', '#colleges');
-  jsonToDatalist('http://localhost:5000/registration/majors', '#majors');
+  jsonToDatalist('/registration/colleges', '#colleges');
+  jsonToDatalist('/registration/majors', '#majors');
   
   //method used to populate datalists from a JSON array
   function checkPasswordsMatch() {
