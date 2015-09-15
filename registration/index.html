@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--TODO
-- Code formatting
-- Resume button appearance
-- Waiver appearance?
--->
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +12,7 @@
 
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
   rel='stylesheet' type='text/css'>
-  
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -27,7 +21,7 @@
 
 </head>
 
-<body>
+<body class="transparent">
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,18 +34,11 @@
         </button>
         <a href="/"><img class="navbar-img" height="72" width="72" src="../style/images/logo_white.png" alt=""></a>
       </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="/">Home</a>
-          </li>
-        </ul>
-      </div>
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
   </nav>
+
   <div class="container">
     <h1 class="reg-title">UB Hacking Registration</h1>  
     <p>Thanks for your interest in UBHacking! Please fill in all the fields that you are able to, as it helps us keep track of data.</p>
@@ -59,174 +46,135 @@
     <form method="post" action="/registration/add_hacker" enctype="multipart/form-data">
       <h2 class="group-title">Account Information</h2>
       <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
-            <li>
-              <label for="email">Email</label><span class=""> *</span>
-              <input type="email" name="email" id="email" class="form-reg" placeholder="ubhacking@example.com"  required autofocus>
-            </li>
-            <li><label for="password">Password</label><span class=""> *</span>
-              <input type="password" name="password" id="password" class="form-reg" placeholder="Password" required>
-            </li>
-            <li><label for="confirm-password">Confirm password</label><span class=""> *</span>
-              <input type="password" name="confirm-password" id="confirm-password" class="form-reg" placeholder="Confirm password" required>
-            </li>
-          </ul>
+        <div class="panel-body form-group">
+
+          <label for="email">Email</label><span class=""> *</span>
+          <input type="email" name="email" id="email" class="form-control" placeholder="ubhacking@example.com"  required autofocus>
+
+          <label for="password">Password</label><span class=""> *</span>
+          <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+
+          <label for="confirm-password">Confirm password</label><span class=""> *</span>
+          <input type="password" name="confirm-password" id="confirm-password" class="form-control" placeholder="Confirm password" required>
+          <p id="confirm-password-warning"></p>
         </div>
       </div>
 
       <h2 class="group-title">Personal Information</h2>
       <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
-            <li>
-              <label for="firstname">First Name</label><span class=""> *</span>
-              <input type="text" name="firstname" id="firstname" class="form-reg" placeholder="First" required>
-            </li> 
-            <li>
-              <label for="lastname">Last Name</label><span class=""> *</span>
-              <input type="text" name="lastname" id="lastname" class="form-reg" placeholder="Last" required>
-            </li>
-            <li class>
-              <label for="phone">Phone number (for Hackathon updates via text)</label>
-              <input type="text" name="phone" id="phone" class="form-reg" placeholder="123-456-7890">
-            </li>
-            <li>
-              <label for="sex">Sex</label>
-              <select name="sex" id="sex" class="form-reg">
-                <option value="">Please select one.</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="unlisted">Not Listed</option>
-              </select>
-            </li>
+        <div class="panel-body form-group">
 
-            <li>
-              <label for="schools">School</label><span class=""> *</span>
-              <input list="colleges" type="text" name="college" id="schools" class="form-reg" placeholder="School" required>
-              <datalist id="colleges">
-                <option value="Unlisted"></option>
-              </datalist>
-            </li>
+          <label for="firstname">First Name</label><span class=""> *</span>
+          <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First" required>
 
-            <li>
-              <label for="major">Major</label><span class=""> *</span>
-              <input list="majors"type="text" name="major" id="major" class="form-reg" placeholder="Major" required>
-              <datalist id="majors">
-                <option value="Unlisted"></option>
-              </datalist>
-            </li>
-            <li>
-              <label for="year">Year</label><span class=""> *</span>
-              <select name="year" id="year" class="form-reg" required>
-                <option value="">Please select one.</option>
-                <option value="freshman">Freshman</option>
-                <option value="sophomore">Sophomore</option>
-                <option value="junior">Junior</option>
-                <option value="senior">Senior</option>
-                <option value="other">Other</option>
-              </select>
-            </li>
-          </ul>
+          <label for="lastname">Last Name</label><span class=""> *</span>
+          <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last" required>
+
+          <label for="phone">Phone number (for Hackathon updates via text)</label>
+          <input type="tel" name="phone" id="phone" class="form-control" placeholder="123-456-7890">
+
+          <label for="sex">Sex</label>
+          <select name="sex" id="sex" class="form-control">
+            <option selected disabled hidden value="">Please select one</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unlisted">Not Listed</option>
+          </select>
+
+          <label for="schools">School</label><span class=""> *</span>
+          <input list="colleges" type="text" name="college" id="schools" class="form-control" placeholder="School" required>
+          <datalist id="colleges">
+            <option value="unlisted">Unlisted</option>
+          </datalist>
+
+          <label for="major">Major</label><span class=""> *</span>
+          <input list="majors" type="text" name="major" id="major" class="form-control" placeholder="Major" required>
+          <datalist id="majors">
+            <option value="unlisted">Unlisted</option>
+          </datalist>
+
+          <label for="year">Year</label><span class=""> *</span>
+          <select name="year" id="year" class="form-control" required>
+            <option selected disabled hidden value="">Please select one</option>
+            <option value="freshman">Freshman</option>
+            <option value="sophomore">Sophomore</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+            <option value="other">Other</option>
+          </select>
         </div>
       </div>
 
       <h2 class="group-title">Hackathon Stuff</h2>
       <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
-            <li>
-              <label for="first-hackathon">Is this your first Hackathon?</label><span class=""> *</span>
-              <select name="first-hackathon" id="first-hackathon" class="form-reg" required>
-                <option value="">Please select one.</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </li>
+        <div class="panel-body form-group">
+          <label for="first-hackathon">Is this your first Hackathon?</label><span class=""> *</span>
+          <select name="first-hackathon" id="first-hackathon" class="form-control" required>
+            <option selected disabled hidden value="">Please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
 
-            <li>
-              <label for="project-type">Are you thinking about working with hardware or software?</label><span class=""> *</span>
-              <select name="project-type" id="project-type" class="form-reg" required>
-                <option value="">Please select one.</option>
-                <option value="undecided">Undecided</option>
-                <option value="hardware">Hardware</option>
-                <option value="software">Software</option>
-              </select>
-            </li>
+          <label for="project-type">Are you thinking about working with hardware or software?</label><span class=""> *</span>
+          <select name="project-type" id="project-type" class="form-control" required>
+            <option selected disabled hidden value="">Please select one</option>
+            <option value="undecided">Undecided</option>
+            <option value="hardware">Hardware</option>
+            <option value="software">Software</option>
+          </select>
 
-            <li>
-              <label for="project">What are you building?</label>
-              <textarea name="project" id="project" rows="4" class="form-reg"></textarea>
-            </li>
+          <label for="project">What are you building?</label>
+          <textarea name="project" id="project" rows="4" class="form-control"></textarea>
 
-            <li>
-              <label for="past-project">Tell us about something you have built in the past.</label>
-              <textarea name="past-project" id="past-project" rows="4" class="form-reg"></textarea>
-            </li>
+          <label for="past-project">Tell us about something you have built in the past.</label>
+          <textarea name="past-project" id="past-project" rows="4" class="form-control"></textarea>
 
-            <li>
-              <div>
-                <label for="resume">Resume: (as .pdf)<span class=""> *</span></label>
-                <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" required>
-              </div>
-            </li>
+          <label for="resume">Resume: (as .pdf)<span class=""> *</span></label>
+          <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" required>
 
-            <li>
-              <label for="github">GitHub Username</label>
-              <input type="text" name="github" id="github" placeholder="MalcolmReynolds">
-            </li>
+          <label for="github">GitHub Username</label>
+          <input type="text" name="github" id="github" placeholder="MalcolmReynolds" class="form-control">
 
-            <li>
-              <label for="linkedin">LinkedIn Profile URL</label>
-              <input type="url" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/malcolmreynolds">
-            </li>
+          <label for="linkedin">LinkedIn Profile URL</label>
+          <input type="url" name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/malcolmreynolds" class="form-control">
 
-            <li>
-              <label for="website">Personal Website</label>
-              <input type="url" name="website" id="website" placeholder="https://example.com">
-            </li>
-          </ul>
+          <label for="website">Personal Website</label>
+          <input type="url" name="website" id="website" placeholder="https://example.com" class="form-control">
         </div>
       </div>
 
       <h2 class="group-title">Other</h2>
       <div class="panel panel-default">
-        <div class="panel-body">
-          <ul>
-            <li>
-              <label for="diet">Do you have any dietary restrictions?</label><span class=""> *</span>
-              <select name="diet" id="diet" class="form-reg" required>
-                <option value="" disabled>Please select one.</option>
-                <option value="none">None</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="gluten">Gluten-free</option>
-              </select>
-            </li>
+        <div class="panel-body form-group">
 
-            <li>
-              <label for="shirt">T-Shirt Size</label><span class=""> *</span>
-              <select name="shirt" id="shirt" class="form-reg" required>
-                <option value="" disabled>Please select one.</option>
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
-            </li>
+          <label for="diet">Do you have any dietary restrictions?</label><span class=""> *</span>
+          <select name="diet" id="diet" class="form-control" required>
+            <option selected disabled hidden value="">Please select one</option>
+            <option value="none">None</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="gluten">Gluten-free</option>
+          </select>
 
-            <li>
-              <label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
-              <textarea name="other" id="other" rows="4" class="form-reg"></textarea>
-            </li>
-          </ul>
+          <label for="shirt">T-Shirt Size</label><span class=""> *</span>
+          <select name="shirt" id="shirt" class="form-control" required>
+            <option selected disabled hidden value="">Please select one</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="other">Is there anything else we should know about? (allergies, disabilties, etc.)</label>
+          <textarea name="other" id="other" rows="4" class="form-control"></textarea>
         </div>
       </div>
 
-      <p class="text-center">By submitting, you agree to the terms and conditions and privacy statement found <a href-"#">here</a>.</p>
-
-      <div>
-        <input type="submit" value="Submit" class="submit">
+      <div class="panel panel-default">
+        <div class="panel-body form-group text-center">
+          <p>By submitting, you agree to the terms and conditions and privacy statement found <a href="#">here</a>.</p>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
       </div>
 
     </form>
@@ -243,7 +191,7 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
+
   <!--   Handle registration -->
   <script type="text/javascript" src="../style/js/registration.js"></script>
 

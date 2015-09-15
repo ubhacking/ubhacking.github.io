@@ -2,6 +2,6 @@
 
 $(document).ready(function() {
   var height = $(window).height();
-  var element = $("#title");
+  var element = $("#fullscreen");
   element.height(height - $(".container").height());
 });
