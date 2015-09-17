@@ -8,6 +8,11 @@ html {
     -o-background-size: cover;
 }
 
+/* Jared's addition to add padding to labels for form */
+label {
+    padding-top: 20px;
+}
+
 /* so people know there's more to the front page */
 #scroll {
     position: absolute;
