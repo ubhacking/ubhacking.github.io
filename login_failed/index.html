@@ -16,7 +16,7 @@
 
   <title>UB Hacking Registration</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'
   rel='stylesheet' type='text/css'>
   
   <!-- Latest compiled and minified CSS -->
@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body class="transparent">
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,10 +52,25 @@
     </div>
     <!-- /.container -->
   </nav>
-  <div class="container">
-    <div id="fullscreen">
-    <h1 class="reg-title">UB Hacking Registration</h1>  
-    <p>I'm sorry, we were unable to process your request at this time.  Please try again later.</p>
+  <div class="container-fluid">
+    <div id="fullscreen" class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <h1 class="reg-title">Login</h1>          
+        <p>Username or password was incorrect.  Please try again</p>
+  	<div class="panel panel-default">
+          <div class="panel-body">
+            <form method="post" action="/auth/login">
+              <div class="form-group">
+    		<label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="ubhacking@example.com"  required autofocus>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+              </div>
+              <button type="submit" class="btn btn-default">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -72,6 +87,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
   <script type="text/javascript" src="../style/js/fullscreen.js"></script>
-  
+
+
 </body>
 </html>
