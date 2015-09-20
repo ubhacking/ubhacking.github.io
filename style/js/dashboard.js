@@ -25,4 +25,14 @@ $(document).ready(function() {
   // Initialize
   $('#cancel').click();
 
+  var RETURNABLE_FIELDS = ["email", "firstname", "lastname", "college", "major", "year", "first-hackathon", "project-type", "diet", "shirt", "phone", "sex", "project", "past-project", "github", "linkedin", "website", "other", "status"];
+
+  
+  // Populate page
+  $.get("/registration/get_hacker", function(data) {
+    for(var i = 0; i<RETURNABLE_FIELDS.length; i++) {
+      $('#' + RETURNABLE_FIELDS[i]).val(data[RETURNABLE_FIELDS[i]]);
+    }
+  });
+
 });
