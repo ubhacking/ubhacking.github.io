@@ -47,12 +47,12 @@
       </div>
     </div>
 
-    <form id="account-info" method="post" action="/registration/add_hacker" enctype="multipart/form-data">
+    <form id="account-info" method="post" action="/registration/update_hacker">
       <h2 class="group-title">Account Information</h2>
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="form-group">
-            <label for="email">Email</label><span class=""> *</span>
+            <!-- <label for="email">Email</label><span class=""> *</span>
             <input type="email" name="email" id="email" class="form-control" placeholder="ubhacking@example.com"  required autofocus>
 
             <label for="password">Password</label><span class=""> *</span>
@@ -60,7 +60,7 @@
 
             <label for="confirm-password">Confirm password</label><span class=""> *</span>
             <input type="password" name="confirm-password" id="confirm-password" class="form-control" placeholder="Confirm password" required>
-            <p id="confirm-password-warning"></p>
+            <p id="confirm-password-warning"></p> -->
 
             <label for="firstname">First Name</label><span class=""> *</span>
             <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First" required>
@@ -80,7 +80,7 @@
             </select>
 
             <label for="schools">School</label><span class=""> *</span>
-            <input list="colleges" type="text" name="college" id="schools" class="form-control" placeholder="School" required>
+            <input list="colleges" type="text" name="college" id="college" class="form-control" placeholder="School" required>
             <datalist id="colleges">
               <option value="unlisted">Unlisted</option>
             </datalist>
