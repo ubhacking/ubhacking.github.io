@@ -43,7 +43,7 @@
     <h2 class="group-title"> Status </h2>
     <div class="panel panel-default">
       <div class="panel-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit volutpat mi, eget condimentum nunc cursus in. Etiam tincidunt dictum libero, sed blandit sapien ullamcorper eu. Ut erat ex, venenatis posuere venenatis vitae, volutpat vel velit. Curabitur convallis velit ut erat porttitor posuere. Nullam in faucibus eros, ac euismod nulla. Quisque iaculis dolor nec porttitor tristique. Etiam tempor nisi enim, et rhoncus massa elementum nec.</p>
+        <p id="status"></p>
       </div>
     </div>
 
@@ -158,19 +158,6 @@
         </div>
       </div>
     </form>
-
-    <!-- Separating resumes from the rest of the account detail -->
-    <h2 class="group-title">Resume</h2>
-    <div class="panel panel-default">
-      <div class="panel-body">
-          <form method="post" action="/registration/update_resume" enctype="multipart/form-data">
-          <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" required>
-          <!--<a type="button" href="/registration/view_resume" class="btn btn-default">View Current</a>-->
-          <!--<button type="submit" class="btn btn-default">Submit</button>-->
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-    </div>
 
     <!-- container -->
   </div>

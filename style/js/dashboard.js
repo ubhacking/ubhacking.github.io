@@ -31,7 +31,11 @@ $(document).ready(function() {
   // Populate page
   $.get("/registration/get_hacker", function(data) {
     for(var i = 0; i<RETURNABLE_FIELDS.length; i++) {
-      $('#' + RETURNABLE_FIELDS[i]).val(data[RETURNABLE_FIELDS[i]]);
+      if(RETURNABLE_FIELDS[i] == 'status') {
+        $('#status').text(data['status']);
+      } else {
+        $('#' + RETURNABLE_FIELDS[i]).val(data[RETURNABLE_FIELDS[i]]);
+      }
     }
   });
 
