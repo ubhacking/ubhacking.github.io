@@ -33,10 +33,10 @@ label {
     margin-top: 15%;
 }
 body {
-    padding-top: 7em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 6em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 .navbar .container {
-    height: 7em;
+    height: 6em;
 }
 .transparent {
     background-color: rgba(255, 255, 255, 0);
