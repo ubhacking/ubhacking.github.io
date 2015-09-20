@@ -163,11 +163,11 @@
     <h2 class="group-title">Resume</h2>
     <div class="panel panel-default">
       <div class="panel-body">
-        <form method="post" action="/registration/update_resume" enctype="multipart/form-data">
-          <div class="form-group">
-            <input data-label="upload" class="form-control" type="file" name="resume" id="resume" accept="application/pdf" required>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <form method="post" action="/registration/update_resume" enctype="multipart/form-data">
+          <input data-label="upload" type="file" name="resume" id="resume" accept="application/pdf" required>
+          <!--<a type="button" href="/registration/view_resume" class="btn btn-default">View Current</a>-->
+          <!--<button type="submit" class="btn btn-default">Submit</button>-->
+          <input type="submit" value="Submit">
         </form>
       </div>
     </div>
