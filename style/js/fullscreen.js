@@ -3,7 +3,7 @@
 $(document).ready(function() {
   var height = $(window).height();
   var element = $("#fullscreen");
-  element.height(height - ($(".container").height() + 30));
+  element.height(height - $(".container").height());
 });
 
 $('.nav a').on('click', function(){
