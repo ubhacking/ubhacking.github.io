@@ -22,7 +22,7 @@
 
 $(document).ready(function(){
     var table = $('#resume-table').DataTable({
-      "ajax" : '/sponsors/view_all',
+      "ajax" : 'https://ubhacking.com/sponsors/view_all',
       "columnDefs": [
             {
                 "targets": [ 0 ],
@@ -37,7 +37,10 @@ $(document).ready(function(){
     });
 
     $('#select-all').click(function () {
-      $('#resume-table tbody > tr').addClass('selected');
+      // $('#resume-table tbody > tr').addClass('selected');
+      table.rows().every(function (){
+        this.addClass("selected")
+      })
     });
 
     $('#select-none').click(function () {
