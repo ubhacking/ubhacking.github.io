@@ -45,11 +45,11 @@ $(document).ready(function(){
     });
 
     $('#download').click(function () {
-      uids = [];
-      table.rows( {selected:true} ).each(function() {
-        uids.push(table.row(this).data()[0]);
-      });
-      console.log(uids);
+      // uids = [];
+      // table.rows( {selected:true} ).each(function() {
+      //   uids.push(table.row(this).data()[0]);
+      // });
+      console.log("uids");
       //window.location.href = "http://stackoverflow.com";
     });
 
