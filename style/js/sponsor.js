@@ -38,22 +38,28 @@ $(document).ready(function(){
 
     $('#select-all').click(function () {
       // $('#resume-table tbody > tr').addClass('selected');
-      table.rows().every(function (){
-        this.addClass("selected")
-      })
+      table.rows().iterator('row', function (context, index){
+        $(this.row(index).node()).addClass('selected')
+      });
     });
 
     $('#select-none').click(function () {
-      $('#resume-table tbody > tr').removeClass('selected');
+      // $('#resume-table tbody > tr').removeClass('selected');
+      // console.log('select none!!!');
+      table.rows().every(function (index){
+        $(this.row(index).node()).removeClass('selected');
+      });
     });
 
     $('#download').click(function () {
-      // uids = [];
-      // table.rows( {selected:true} ).each(function() {
-      //   uids.push(table.row(this).data()[0]);
-      // });
-      console.log("uids");
-      //window.location.href = "http://stackoverflow.com";
+      uids = [];
+      table.rows().every(function(index){
+        if($(this.row(index).node()).hasClass('selected')) {
+          uids.push(table.row(index).data()[0]);
+        }
+      });
+      console.log(uids);
+      window.location.href = "/sponsors/download?resumes=" + uids;
     });
 
     function viewResume(uid) {
