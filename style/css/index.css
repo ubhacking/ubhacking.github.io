@@ -13,6 +13,10 @@ label {
     padding-top: 20px;
 }
 
+.margin-100 {
+  margin-top: 100px;
+}
+
 /* so people know there's more to the front page */
 #scroll {
     position: absolute;
@@ -29,9 +33,7 @@ label {
     font-size: 32px;
     font-weight: 200;
 }
-.title-margin {
-    margin-top: 15%;
-}
+
 body {
     padding-top: 6em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
