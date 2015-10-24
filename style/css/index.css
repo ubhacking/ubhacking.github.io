@@ -37,9 +37,16 @@ label {
 body {
     padding-top: 6em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
-.navbar .container {
-    height: 5.2em;
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFF;
 }
+
+.navbar-default {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .transparent {
     background-color: rgba(255, 255, 255, 0);
 }
@@ -61,24 +68,12 @@ footer {
     color: #FFF;
     background-color: #607D8B;
 }
-/* novbar font */
-.navbar-inverse .navbar-nav>li>a {
-    color: #FFF;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover {
-    background-color: #7D8C92;
-}
 
 /* change navbar background color*/
 .navbar {
     background-color: #000;
 }
-/* removed border from navbar*/
-.navbar-fixed-top {
-    top: 0;
-    border-width: 0;
-}
+
 /* font color, slightly brighter than black*/
 h1, h2, h3, h4, h5, h6 {
   color: #212121;
