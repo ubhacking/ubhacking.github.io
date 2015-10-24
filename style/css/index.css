@@ -49,7 +49,7 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #FFFFFF;
-    background-color: #455A64;
+    background-color: #000;
     width: 100%;
 }
 
@@ -72,7 +72,7 @@ footer {
 
 /* change navbar background color*/
 .navbar {
-    background-color: #455A64;
+    background-color: #000;
 }
 /* removed border from navbar*/
 .navbar-fixed-top {
@@ -88,34 +88,4 @@ body {
   color: #212121;
 }
 
-/* Gela's Addition for the collapsed nav bar */
 
-.nav {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 0 !important;
-    margin-top: -3px !important;
-}
-
-.navbar-collapse {
-	background-color: #455A64 !important;
-		padding-top: 15px !important;
-}
-
-.navbar-collapse:hover {
-	background-color: #455A64;
-}
-
-.navbar-inverse {
-		padding-top: 15px !important;
-        padding-bottom: 15px !important;
-}
-
-.navbar-image {
-
-	padding-top: -5px !important;
-}
-
-.nav .navbar-nav .navbar-right {
-	padding-top: -10px !important;
-}
