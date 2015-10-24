@@ -34,6 +34,10 @@ $(document).ready(function(){
         }
       });
       console.log(uids);
+      if (uids.length == 0) {
+        window.alert("Please select at least one hacker");
+        return;
+      }
       window.location.href = "/sponsors/download?resumes=" + uids;
     });
 
