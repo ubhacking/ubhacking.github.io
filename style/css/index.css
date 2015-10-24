@@ -62,25 +62,26 @@ footer {
 
 /* Colors */
 /* content*/
+.gray {
+    background-color: rgba(194,209,224,.7);
+}
+
 .blue {
-    padding: 40px 0px 40px;
-    font-size: 16px;
+    background-color: rgba(20,41,61, .7);
     color: #FFF;
-    background-color: #607D8B;
 }
 
 /* change navbar background color*/
 .navbar {
     background-color: #000;
-}
-
-/* font color, slightly brighter than black*/
-h1, h2, h3, h4, h5, h6 {
-  color: #212121;
+    border: none;
 }
 
 body {
   color: #212121;
 }
 
+.row {
+  padding-bottom: 25px;
+}
 
