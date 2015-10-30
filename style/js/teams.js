@@ -14,18 +14,6 @@ $(document).ready(function(){
         $(this).toggleClass('selected');
     });
 
-    // $('#select-all').click(function () {
-    //   table.rows().iterator('row', function (context, index){
-    //     $(this.row(index).node()).addClass('selected')
-    //   });
-    // });
-
-    // $('#select-none').click(function () {
-    //   table.rows().every(function (index){
-    //     $(this.row(index).node()).removeClass('selected');
-    //   });
-    // });
-
     $('#create_team').click(function () {
       uids = [];
       table.rows().every(function(index){
@@ -38,11 +26,7 @@ $(document).ready(function(){
         window.alert("Please select at least one hacker");
         return;
       }
-      window.location.href = "https://google.com"
+      window.location.href = "/teams/create_team?team_members="+uids
     });
-
-    // function viewResume(uid) {
-    //   window.location.href = "/sponsors/view_resume?uid=" + uid;
-    // }
 });
 
