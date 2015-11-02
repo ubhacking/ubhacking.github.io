@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  window.location.href = '/registration_closed'
+   // window.location.href = '/registration_closed'
 
   jsonToDatalist('/registration/colleges', '#colleges');
   jsonToDatalist('/registration/majors', '#majors');
