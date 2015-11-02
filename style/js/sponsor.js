@@ -1,25 +1,3 @@
-// $(document).ready(function(){
-//     $('#resume-table').DataTable({
-//       "ajax" : '/sponsors/view_all',
-//       "columnDefs": [
-//             {
-//                 "targets": [ 0 ],
-//                 "visible": false,
-//                 "searchable": false
-//             }
-//         ],
-//       "createdRow": function ( row, data, index ) {
-//         $('td', row).click(function() {
-//           viewResume(data[0]);
-//         });
-//       }
-//     });
-
-//     function viewResume(uid) {
-//       window.location.href = "/sponsors/view_resume?uid=" + uid;
-//     }
-// });
-
 $(document).ready(function(){
     var table = $('#resume-table').DataTable({
       "ajax" : 'https://ubhacking.com/sponsors/view_all',
@@ -37,15 +15,12 @@ $(document).ready(function(){
     });
 
     $('#select-all').click(function () {
-      // $('#resume-table tbody > tr').addClass('selected');
       table.rows().iterator('row', function (context, index){
         $(this.row(index).node()).addClass('selected')
       });
     });
 
     $('#select-none').click(function () {
-      // $('#resume-table tbody > tr').removeClass('selected');
-      // console.log('select none!!!');
       table.rows().every(function (index){
         $(this.row(index).node()).removeClass('selected');
       });
@@ -59,6 +34,10 @@ $(document).ready(function(){
         }
       });
       console.log(uids);
+      if (uids.length == 0) {
+        window.alert("Please select at least one hacker");
+        return;
+      }
       window.location.href = "/sponsors/download?resumes=" + uids;
     });
 

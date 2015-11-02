@@ -21,13 +21,14 @@
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.css">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link href="../style/css/index.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="transparent">
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -56,12 +57,47 @@
     </div>
     <!-- /.container -->
   </nav>
+  
   <div class="container">
-    <div id="fullscreen">
-    <h1 class="reg-title">Account Information Updated</h1> 
-    <p>You have successfully updated your account information</p> 
-    <a href="/dashboard">Return to dashboard</a>
+    <div class="row">
+    <div class="col-md-12">
+    <h1 class="reg-title">Welcome to UB Hacking</h1>
+    <p>Please select your team members and click "Create Team"</p>
+    
+    <button id="create_team" class="btn btn-primary">Create Team</button>
+    
+    <table id="team-table" class="display">
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>School</th>
+          <th>Major</th>
+          <th>GPA</th>
+          <th>Current Year</th>
+          <th>Languages</th>
+          <th>View Resume</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th>User Id</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>School</th>
+          <th>Major</th>
+          <th>GPA</th>
+          <th>Current Year</th>
+          <th>Languages</th>
+          <th>View Resume</th>
+        </tr>
+      </tfoot>
+    </table>
+
     </div>
+   </div>
   </div>
 
   <footer class="black-wrapper text-center"> 
@@ -77,6 +113,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
   <script type="text/javascript" src="../style/js/fullscreen.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
+
+  <script src="../style/js/teams.js"></script>
   
 </body>
 </html>

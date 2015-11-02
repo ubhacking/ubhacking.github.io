@@ -18,6 +18,17 @@ $(document).ready(function() {
     $('#edit').prop('disabled', false);
   });
 
+  $('#view').click(function() {
+    var rs = Math.random();
+    window.location.href = "/registration/view_resume?rs=" + rs;
+  });
+
+  $('#element2').hide();
+
+  $('#update').click(function() {
+    $('#element2').toggle(400);
+  });
+
   function disableFields(disabled) {
     $("#account-info input,textarea,select").prop("disabled", disabled);
   }
