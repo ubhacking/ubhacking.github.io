@@ -36,7 +36,7 @@ $(document).ready(function() {
   // Initialize
   $('#cancel').click();
 
-  var RETURNABLE_FIELDS = ["email", "firstname", "lastname", "college", "major", "year", "first-hackathon", "project-type", "diet", "shirt", "phone", "sex", "project", "past-project", "github", "linkedin", "website", "other", "status"];
+  var RETURNABLE_FIELDS = ["email", "firstname", "lastname", "college", "major", "year", "first-hackathon", "project-type", "diet", "shirt", "phone", "sex", "project", "past-project", "github", "linkedin", "website", "other", "status", "rsvp"];
 
   
   // Populate page
@@ -44,7 +44,13 @@ $(document).ready(function() {
     for(var i = 0; i<RETURNABLE_FIELDS.length; i++) {
       if(RETURNABLE_FIELDS[i] == 'status') {
         $('#status').text(data['status']);
-      } else {
+      } 
+
+      else if (RETURNABLE_FIELDS[i] == 'rsvp') {
+        $('#rsvp').text(data['rsvp']);
+      } 
+
+      else {
         $('#' + RETURNABLE_FIELDS[i]).val(data[RETURNABLE_FIELDS[i]]);
       }
     }
