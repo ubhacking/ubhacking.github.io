@@ -3,7 +3,7 @@ $(document).ready(function(){
       "ajax" : 'https://ubhacking.com/sponsors/view_all',
       "columnDefs": [
             {
-                "targets": [ 0, 4, 5, 6, 7, 8 ],
+                "targets": [ 0, 5, 6, 7, 8, 9 ],
                 "visible": false,
                 "searchable": false
             }
