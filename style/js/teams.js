@@ -22,21 +22,24 @@ $(document).ready(function(){
         }
       });
       // console.log(uids);
-      if (uids.length == 0) {
-        window.alert("Please select at least one hacker");
-        return;
-      }
+      // if (uids.length == 0) {
+      //   window.alert("Please select at least one hacker");
+      //   return;
+      // }
 
-      var form = document.getElementById('form');
+      // var form = document.getElementById('form');
+      var team_members = 'team_members=' + uids
+      var team_name = 'team_name=' + $('#team_name').val();
+      var location = 'location=' + $('#location').val();
 
-      var hiddenField = document.createElement("input");
-      hiddenField.setAttribute("type", "hidden");
-      hiddenField.setAttribute("name", "uid");
-      hiddenField.setAttribute("value", uids);
+      // var hiddenField = document.createElement("input");
+      // hiddenField.setAttribute("type", "hidden");
+      // hiddenField.setAttribute("name", "uid");
+      // hiddenField.setAttribute("value", uids);
 
-      form.appendChild(hiddenField);
-      form.submit();
-      // window.location.href = "/teams/create_team?team_members="+uids
+      // form.appendChild(hiddenField);
+      // form.submit();
+      window.location.href = "/teams/create_team?" + team_members + '&' + team_name + '&' + location
     });
 });
 
