@@ -26,7 +26,17 @@ $(document).ready(function(){
         window.alert("Please select at least one hacker");
         return;
       }
-      window.location.href = "/teams/create_team?team_members="+uids
+
+      var form = document.getElementById('form');
+
+      var hiddenField = document.createElement("input");
+      hiddenField.setAttribute("type", "hidden");
+      hiddenField.setAttribute("name", "uid");
+      hiddenField.setAttribute("value", uids);
+
+      form.appendChild(hiddenField);
+      form.submit();
+      // window.location.href = "/teams/create_team?team_members="+uids
     });
 });
 
