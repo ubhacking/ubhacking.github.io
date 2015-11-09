@@ -41,6 +41,10 @@ $(document).ready(function(){
       window.location.href = "/sponsors/download?resumes=" + uids;
     });
 
+    $('#download_attending').click(function () {
+      window.location.href = "/sponsors/get_attending_hackers";
+    });
+
     function viewResume(uid) {
       window.location.href = "/sponsors/view_resume?uid=" + uid;
     }
