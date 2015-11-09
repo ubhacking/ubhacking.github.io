@@ -61,62 +61,42 @@
   <div class="container">
     <div class="row">
     <div class="col-md-12">
-    <h1 class="reg-title">Welcome to UB Hacking</h1>
-    <p>Please select your team members and click "Create Team"</p>
+    <h1 class="reg-title">Mentors</h1>
+    
+    <table id="mentor-table" class="display">
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>Team Members</th>
+          <th>Location</th>
+        </tr>
+      </thead>
 
-    <div class="row">
-	    <div class="col-lg-3 form-group">
-	    	<form id="form" action="#">
-		    	<label>Team Name</label><span class=""> *</span>
-		    	<input for="text" class="form-control" placeholder="Team Name" required>
+      <tfoot>
+        <tr>
+          <th>Team Name</th>
+          <th>Team Members</th>
+          <th>Location</th>
+        </tr>
+      </tfoot>
+    </table>
 
-		    	<label>Location</label>
-		    	<input for="text" class="form-control" placeholder="Location">
+    <h1>Floor Plan</h1>
+    <div class="panel">
+      <div class="panel-body">
+        <p>I hope that we can add images of a floor plan for the mentors to look at so they know where to go</p>
+        
+        <h3>Floor 1</h3>
+        <p>image</p>
 
-		    	<br>
+        <h3>Floor 2</h3>
+        <p>image</p>
 
-		    	<button type="submit" id="create_team" class="btn btn-primary">Create Team</button>
-	    	</form>
-	    </div>
+        <h3>Floor 3</h3>
+        <p>image</p>
 
-	    <div class="col-lg-9">
-	    	<table id="team-table" class="display">
-		      <thead>
-		        <tr>
-		          <th>User Id</th>
-		          <th>First</th>
-		          <th>Last</th>
-		          <th>Email</th>
-		          <th>School</th>
-		          <th>Major</th>
-		          <th>GPA</th>
-		          <th>Current Year</th>
-		          <th>Languages</th>
-		          <th>View Resume</th>
-		        </tr>
-		      </thead>
-
-		      <tfoot>
-		        <tr>
-		          <th>User Id</th>
-		          <th>First</th>
-		          <th>Last</th>
-		          <th>Email</th>
-		          <th>School</th>
-		          <th>Major</th>
-		          <th>GPA</th>
-		          <th>Current Year</th>
-		          <th>Languages</th>
-		          <th>View Resume</th>
-		        </tr>
-		      </tfoot>
-		    </table>
-	    </div>
+      </div>
     </div>
-    
-    
-    
-    
 
     </div>
    </div>
@@ -138,7 +118,14 @@
 
   <script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
 
-  <script src="../style/js/teams.js"></script>
+  <!-- <script src="../style/js/mentor.js"></script> -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var table = $('#mentor-table').DataTable({
+        "ajax" : 'https://ubhacking.com/teams/get_all_teams',
+      });
+    });
+  </script>
   
 </body>
 </html>
