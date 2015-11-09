@@ -31,6 +31,7 @@ $(document).ready(function(){
       var team_members = 'team_members=' + uids
       var team_name = 'team_name=' + $('#team_name').val();
       var location = 'location=' + $('#location').val();
+      // console.log("/teams/create_team?" + team_members + '&' + team_name + '&' + location)
 
       // var hiddenField = document.createElement("input");
       // hiddenField.setAttribute("type", "hidden");
