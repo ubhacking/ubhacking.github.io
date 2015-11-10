@@ -1,5 +1,27 @@
 $(document).ready(function() {
 
+  $('#teams_edit').on('click', function() {
+    $("#location").prop("disabled", false);
+    // deactivate edit
+    $('#teams_edit').prop('disabled', true);
+    // activate submit and cancel
+    $('#update_location').prop('disabled', false);
+    $('#teams_cancel').prop('disabled', false);
+  });
+
+  $('#teams_cancel').on('click', function() {
+    // disableFields(true);
+    $("#location").prop("disabled", true);
+    // deactivate submit cancel
+    $('#update_location').prop('disabled', true);
+    $('#teams_cancel').prop('disabled', true);
+    // activate edit
+    $('#teams_edit').prop('disabled', false);
+  });
+
+  $('#teams_cancel').click();
+  // --------------------------------------------------------------------------
+
   $('#edit').on('click', function() {
     disableFields(false);
     // deactivate edit
