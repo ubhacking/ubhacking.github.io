@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   $('#teams_cancel').click();
 
-  $.get('/teams/get_location' function(data){
+  $.get('/teams/get_location', function(data){
     $('#location').val(data['location']);
   });
   // --------------------------------------------------------------------------
