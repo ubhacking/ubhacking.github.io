@@ -21,6 +21,14 @@ $(document).ready(function() {
 
   $('#teams_cancel').click();
 
+  $.get('/teams/get_team_members', function(data){
+    // var something = ['steve', 'roger']
+    var members_list = data['team_members'];
+    for (member in member_list) {
+      $('#team_members').append('<p>' + member_list[member] + '</p>')
+    }
+  });
+
   $.get('/teams/get_location', function(data){
     $('#location').val(data['location']);
   });
