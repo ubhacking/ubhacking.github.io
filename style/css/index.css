@@ -13,6 +13,10 @@ label {
     padding-top: 20px;
 }
 
+table {
+    border: none;
+}
+
 .margin-100 {
   margin-top: 100px;
 }
