@@ -64,7 +64,28 @@
     <p><a href="/teams">Create Teams</a></p>
     <p><a href="/mentor">Mentors Page</a></p>
     <p><a href="/sponsor">Sponsors Page</a></p>
+    
+    <br>
+    
+    <table id="check-in-table" class="display">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </tfoot>
+    </table>
+
+
     </div>
+
   </div>
 
   <footer class="black-wrapper text-center"> 
@@ -80,6 +101,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
   <script type="text/javascript" src="../style/js/fullscreen.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var table = $('#check-in-table').DataTable({
+        "ajax" : '/admin/get_all_checked_in',
+      });
+    });
+  </script>
   
 </body>
 </html>
