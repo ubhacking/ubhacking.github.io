@@ -21,6 +21,11 @@ $(document).ready(function() {
 
   $('#teams_cancel').click();
 
+  $.get('/teams/get_team_name', function(data){
+    var name = data['name'];
+    $('#team_name').append('<p>'+ name + '</p>')
+  });
+
   $.get('/teams/get_team_members', function(data){
     // var something = ['steve', 'roger']
     var member_list = data['team_members'];
