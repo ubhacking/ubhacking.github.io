@@ -10,6 +10,10 @@ $(document).ready(function(){
         ]
     });
 
+   $.get('/admin/get_checked_in_count', function(data) {
+    $('#count').text(data['count']);
+   });
+
     $('#team-table tbody').on( 'click', 'tr', function () {
         $('#team-table tbody tr').removeClass('selected');
         $(this).toggleClass('selected');
