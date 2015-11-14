@@ -21,14 +21,13 @@
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.css">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link href="../style/css/index.css" rel="stylesheet">
 
 </head>
 
-<body class="transparent">
+<body>
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -57,64 +56,11 @@
     </div>
     <!-- /.container -->
   </nav>
-  
   <div class="container">
-    <div class="row">
-    <div class="col-md-8">
-    <h1 class="reg-title">Welcome</h1>
-    <p>Click on a hacker to view their resume</p>
+    <div id="fullscreen">
+    <h1 class="reg-title">UB Hacking Registration</h1>  
+    <p>Team is required before you change the location</p>
     </div>
-    </div>
-
-    <div class="row">
-    <div class="col-md-10">   
-    <button id="select-all" class="btn btn-default">Select All</button>
-    <button id="select-none" class="btn btn-default">Select None</button>
-    <button id="download" class="btn btn-primary">Download</button>
-    </div>
-    <div class="col-md-2">
-    <button id="download_attending" class="btn btn-primary">Download CSV</button>
-    </div>
-    </div>
-
-    <div class="row">
-    <div class="col-md-12">    
-    <table id="resume-table" class="display">
-      <thead>
-        <tr>
-          <th>User Id</th>
-          <th>First</th>
-          <th>Last</th>
-          <th>Email</th>
-          <th>School</tduh>
-          <th>Major</th>
-          <th>GPA</th>
-          <th>Current Year</th>
-          <th>Languages</th>
-          <th>View Resume</th>
-          <th>Checked In</th>
-        </tr>
-      </thead>
-
-      <tfoot>
-        <tr>
-          <th>User Id</th>
-          <th>First</th>
-          <th>Last</th>
-          <th>Email</th>
-          <th>School</th>
-          <th>Major</th>
-          <th>GPA</th>
-          <th>Current Year</th>
-          <th>Languages</th>
-          <th>View Resume</th>
-          <th>Checked In</th>
-        </tr>
-      </tfoot>
-    </table>
-
-    </div>
-   </div>
   </div>
 
   <footer class="black-wrapper text-center"> 
@@ -130,10 +76,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
   <script type="text/javascript" src="../style/js/fullscreen.js"></script>
-
-  <script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
-
-  <script src="../style/js/sponsor.js"></script>
   
 </body>
 </html>

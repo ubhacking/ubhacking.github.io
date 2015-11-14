@@ -11,6 +11,7 @@ $(document).ready(function(){
     });
 
     $('#team-table tbody').on( 'click', 'tr', function () {
+        $('#team-table tbody tr').removeClass('selected');
         $(this).toggleClass('selected');
     });
 
